@@ -1,0 +1,11 @@
+{
+  "name": "project_lk_workspace",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "dependencies": {
+    "lucide-react": "^0.577.0"
+  }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Đăng nhập | Hệ thống Phụ tùng Ô tô</title>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex min-h-screen w-full overflow-hidden">
+<!-- Left Side: Visual/Branding (Hidden on mobile) -->
+<div class="hidden lg:flex lg:w-1/2 relative bg-primary/10 overflow-hidden items-center justify-center p-12">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-background-dark"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="High quality modern car engine and performance parts layout" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXhCGQj6160AFU0Yzg_WOb-D9N3K_lFlR7G-8FkcjmcFnzhh2ou8L-1cx1TNDraoYEMf2hGHCce2H5uuUSOtqi737V0OfmW8uJ5e0-TQbpNiDBb1ULOX6QZu0FLiC1Daio3jIGzUe5iDIQBiffWwq4YICtQcEUj4dbFd1zaoMDIfynYiNuvYBjlPD4cAhMk3BpJhwI2tORs4yB-6ZzRzjjzzcmtBm3SAECuUQ-N5lYqXZZ1RR7L6mxr_y79P8f7tmn4KODVAet-cw");'>
+</div>
+</div>
+<div class="relative z-10 max-w-lg text-left">
+<div class="mb-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-semibold">
+<span class="material-symbols-outlined text-sm">verified</span>
+                    Hệ thống quản lý chuyên nghiệp
+                </div>
+<h1 class="text-5xl font-black leading-tight tracking-tight mb-6 text-white">
+                    Giải pháp tối ưu cho <span class="text-primary">Phụ tùng Ô tô</span>
+</h1>
+<p class="text-slate-300 text-lg leading-relaxed">
+                    Nền tảng cung cấp linh kiện chính hãng, tra cứu mã phụ tùng nhanh chóng và quản lý kho vận hiệu quả cho các garage và đại lý.
+                </p>
+<div class="mt-12 grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-3xl font-bold text-white">500k+</span>
+<span class="text-slate-400 text-sm">Sản phẩm có sẵn</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-3xl font-bold text-white">2k+</span>
+<span class="text-slate-400 text-sm">Đối tác tin cậy</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 md:p-12 lg:p-24 bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-[440px] flex flex-col gap-8">
+<!-- Header -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-3xl font-bold">settings_input_component</span>
+<span class="text-2xl font-black tracking-tighter uppercase">AutoPart Pro</span>
+</div>
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white">Chào mừng trở lại</h2>
+<p class="text-slate-600 dark:text-slate-400">Đăng nhập để tiếp tục quản lý và tìm kiếm phụ tùng.</p>
+</div>
+<!-- Form -->
+<div class="flex flex-col gap-5">
+<!-- Email/Phone Input -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Email hoặc Số điện thoại</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">mail</span>
+<input class="w-full h-12 pl-12 pr-4 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400" placeholder="example@gmail.com" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Mật khẩu</label>
+<a class="text-xs font-semibold text-primary hover:underline" href="#">Quên mật khẩu?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full h-12 pl-12 pr-12 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-transparent" id="remember" type="checkbox"/>
+<label class="text-sm text-slate-600 dark:text-slate-400 select-none" for="remember">Duy trì đăng nhập</label>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                        Đăng nhập
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="relative py-2">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase">
+<span class="bg-background-light dark:bg-background-dark px-2 text-slate-500">Hoặc đăng nhập bằng</span>
+</div>
+</div>
+<!-- Social Login -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 h-11 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
+<img alt="Google" class="w-5 h-5" data-alt="Google colorful logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxn7lAwoyXjOUu3UMWk9BcG1c7Y759lI6eWs60pDG97a8o_3xTKrrOvboxVSLlbAxN_wG6YifchkzFrHuuvfZ7KQqNql8llNgUx-aOYPYXSg_oryoPECv1ugn59Il7CDodEArKP2P5kKsZzj0RuKC_mFL4zJKSjEk8BX9_nmmQAvRCB8k-cEp4bmnAS8_Djg2-kQM2iMIKzKbO569YDh6WtGqOlChE0cyvZBUbw20pdDlPwonkZt5GQS4B1qBNSQ6Gecg2ygqfg7k"/>
+<span class="text-sm font-semibold">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-11 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
+<img alt="Facebook" class="w-5 h-5" data-alt="Facebook blue logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQxMy6HfmOtLid_cgqXHqHZpFxlDWHjvCRkDW3w5PIYrYJRtID4h29awxnpioTMRlLe9GdVHo0aAFN3N6gE5s5rapF2Jhh48jceur4ouGAOoGOVTe-Q3CEXamh1P2ZkrsyqNnT_wB-vlDwHMqnsddcZHok0VMUGDRAyD8Cv2aTdvAbVXGpM2IydIH8itjZXVw46h3GN58hZwqeTQwhB1CIOrPEcWBoYhKYklbyRk9K6EL6g4zvuNKUO2RewmDyzt6vG0TJAz-jVJs"/>
+<span class="text-sm font-semibold">Facebook</span>
+</button>
+</div>
+<!-- Footer Link -->
+<p class="text-center text-slate-600 dark:text-slate-400 text-sm">
+                    Chưa có tài khoản? 
+                    <a class="text-primary font-bold hover:underline ml-1" href="#">Đăng ký ngay</a>
+</p>
+</div>
+<!-- Language Switcher or Simple Footer -->
+<div class="mt-auto pt-10 flex gap-6 text-xs text-slate-400">
+<a class="hover:text-primary" href="#">Điều khoản</a>
+<a class="hover:text-primary" href="#">Bảo mật</a>
+<a class="hover:text-primary" href="#">Hỗ trợ</a>
+<div class="ml-auto flex items-center gap-1 cursor-pointer hover:text-primary">
+<span class="material-symbols-outlined text-sm">language</span>
+                    Tiếng Việt
+                </div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 bg-slate-50 dark:bg-slate-900/50 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+<img alt="Avatar" class="h-full w-full object-cover" data-alt="User profile avatar male" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiOozTKYrf0vXZwWln76cadKKhOMk9x-Sj2KcKbDmQYJKmbasIf7hoIeI2a8jw_VTJXFXRrlN1hXU76cSfWY0KfFayPtzzKEhW97fPpNoq59pIrMyKWJSeuRHU-VrXOzgWF6PP8j7hBbqYVCoRUpZeI0-XAZuiJOSI6SugbQa5Ur-UwFwEFuPqcs9U91OYsiY0h3MZtnA43IEeOdmH_HiYmJC78P-5bF9b4PtBHQZd2ERzOCwiFhNQ2L1a6zVRFfJp8eTuP4Lm_bY"/>
+</div>
+<div class="flex flex-col">
+<h1 class="text-sm font-semibold truncate">Nguyễn Văn A</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Khách hàng thân thiết</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-sm font-medium">Trang chủ</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary text-white shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="text-sm font-medium">Thông báo</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span class="text-sm font-medium">Đơn hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Cài đặt</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Đăng xuất</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Header Section -->
+<header class="flex items-center justify-between px-8 py-5 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Trung tâm thông báo</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary/90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Đánh dấu đã đọc</span>
+</button>
+<button class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Filter Tabs -->
+<div class="px-8 bg-white dark:bg-background-dark shadow-sm">
+<div class="flex gap-8 border-b border-slate-200 dark:border-slate-800">
+<button class="py-4 border-b-2 border-primary text-primary text-sm font-bold flex items-center gap-2">
+                        Đơn hàng
+                        <span class="px-1.5 py-0.5 bg-primary text-white text-[10px] rounded-full">3</span>
+</button>
+<button class="py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-sm font-semibold transition-colors">
+                        Hệ thống
+                    </button>
+<button class="py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-sm font-semibold transition-colors">
+                        Khuyến mãi
+                    </button>
+</div>
+</div>
+<!-- Notifications List -->
+<div class="flex-1 overflow-y-auto p-8 space-y-4">
+<!-- Unread Notification Item -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10 dark:bg-primary/5 dark:border-primary/20">
+<div class="flex-shrink-0 size-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">package_2</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="text-sm font-bold text-slate-900 dark:text-slate-100">Đơn hàng #DH-20240501 đã giao thành công</h3>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">Vừa xong</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">Kiện hàng của bạn đã được giao đến địa chỉ văn phòng. Vui lòng kiểm tra và xác nhận.</p>
+<div class="mt-3 flex gap-2">
+<button class="text-xs font-semibold text-primary hover:underline">Xem chi tiết đơn</button>
+</div>
+</div>
+<div class="flex-shrink-0 self-center">
+<div class="size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(17,115,212,0.6)]"></div>
+</div>
+</div>
+<!-- Another Unread Notification -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10 dark:bg-primary/5 dark:border-primary/20">
+<div class="flex-shrink-0 size-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="text-sm font-bold text-slate-900 dark:text-slate-100">Đang giao hàng: Đơn #DH-20240505</h3>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">20 phút trước</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">Tài xế Nguyễn Văn B đang trên đường giao đơn hàng của bạn. Dự kiến đến sau 15 phút.</p>
+</div>
+<div class="flex-shrink-0 self-center">
+<div class="size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(17,115,212,0.6)]"></div>
+</div>
+</div>
+<!-- Read Notification Item -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800">
+<div class="flex-shrink-0 size-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">sell</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Ưu đãi đặc biệt: Giảm 50k</h3>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">2 giờ trước</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-500 mt-1 leading-relaxed">Nhập mã DEAL50 cho đơn hàng từ 200k. Hạn dùng đến hết hôm nay.</p>
+</div>
+<div class="flex-shrink-0 self-center">
+<div class="size-2.5 rounded-full bg-transparent"></div>
+</div>
+</div>
+<!-- Another Notification -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800">
+<div class="flex-shrink-0 size-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Thay đổi trạng thái đơn hàng #DH-20240499</h3>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">Hôm qua</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-500 mt-1 leading-relaxed">Đơn hàng của bạn đã được đối soát và hoàn tất thanh toán.</p>
+</div>
+<div class="flex-shrink-0 self-center">
+<div class="size-2.5 rounded-full bg-transparent"></div>
+</div>
+</div>
+<!-- Empty state hint or Load more -->
+<div class="py-8 flex flex-col items-center justify-center text-slate-400 dark:text-slate-600">
+<span class="material-symbols-outlined text-4xl mb-2">inventory_2</span>
+<p class="text-sm">Bạn đã xem hết thông báo gần đây</p>
+<button class="mt-4 text-primary text-sm font-semibold hover:underline">Xem tất cả lịch sử</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Báo Cáo Doanh Thu Chi Tiết - Seller Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 flex-shrink-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark hidden md:flex flex-col">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">settings_input_component</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-none">Phụ Tùng Auto</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Nhà bán hàng chuyên nghiệp</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Tổng quan</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-sm font-medium">Sản phẩm</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-sm font-medium">Đơn hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg" href="#">
+<span class="material-symbols-outlined fill-1">bar_chart</span>
+<span class="text-sm font-bold">Doanh thu</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Cài đặt</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User avatar profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOUbJgRVxdkj7OdxLmfcY6Wr8uvwa4nOA9p-ai0SIbCt1Z-SDnFeA2EOdbaNIJ-rSfn4mqRjqTDQW4c0nG4LVNoqn4-HJ3FHkfu349G-qcVjUQPzjUNH-rPlzvmBgSWelUE0PScQtSZhnedx2nTCSSdK1BuAfd4RgrSsVIMb9KJSginsFnZGEn67-cOlau4-tnasckdizuwdwoOAu5DI_tM1F1h1ZghImcZvmxOu0YA-kcssGUy1L37qVzywCw1F5XFlA1a1LAee4"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-medium truncate">Admin Phụ Tùng</p>
+<p class="text-xs text-slate-500 truncate">admin@autoparts.vn</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto bg-slate-50 dark:bg-background-dark p-6 lg:p-10">
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Báo Cáo Doanh Thu Chi Tiết</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Theo dõi hiệu quả kinh doanh của bạn trên hệ thống</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-lg">file_download</span>
+                        Xuất báo cáo
+                    </button>
+<button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                        Làm mới
+                    </button>
+</div>
+</div>
+<!-- Date Range Selectors -->
+<div class="flex flex-wrap gap-2 mb-8">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">
+                    7 ngày qua <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400 hover:border-primary dark:hover:border-primary">
+                    30 ngày qua
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400 hover:border-primary dark:hover:border-primary">
+                    Tháng này
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400 hover:border-primary dark:hover:border-primary">
+                    Tùy chỉnh <span class="material-symbols-outlined text-sm">calendar_today</span>
+</button>
+</div>
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center justify-between mb-4">
+<div class="size-10 bg-blue-100 dark:bg-blue-500/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400">payments</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-500/10 px-2 py-1 rounded">+12.5%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Tổng doanh thu</p>
+<h3 class="text-2xl font-bold mt-1">150.000.000₫</h3>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center justify-between mb-4">
+<div class="size-10 bg-emerald-100 dark:bg-emerald-500/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400">trending_up</span>
+</div>
+<span class="text-rose-500 text-xs font-bold bg-rose-500/10 px-2 py-1 rounded">-2.1%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Lợi nhuận ròng</p>
+<h3 class="text-2xl font-bold mt-1">45.000.000₫</h3>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center justify-between mb-4">
+<div class="size-10 bg-amber-100 dark:bg-amber-500/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-400">shopping_bag</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-500/10 px-2 py-1 rounded">+5.3%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Số lượng đơn hàng</p>
+<h3 class="text-2xl font-bold mt-1">1,250</h3>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center justify-between mb-4">
+<div class="size-10 bg-purple-100 dark:bg-purple-500/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-purple-600 dark:text-purple-400">avg_pace</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-500/10 px-2 py-1 rounded">+0.8%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Giá trị TB đơn hàng</p>
+<h3 class="text-2xl font-bold mt-1">120.000₫</h3>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<!-- Large Line Chart -->
+<div class="lg:col-span-2 bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h4 class="text-lg font-bold">Xu hướng Doanh thu &amp; Lợi nhuận</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">So sánh chỉ số trong 7 ngày qua</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary"></div>
+<span class="text-xs font-medium">Doanh thu</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-emerald-500"></div>
+<span class="text-xs font-medium">Lợi nhuận</span>
+</div>
+</div>
+</div>
+<div class="h-[300px] w-full relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 40">
+<!-- Grid lines -->
+<line class="stroke-slate-200 dark:stroke-slate-700" stroke-dasharray="0.5 0.5" stroke-width="0.1" x1="0" x2="100" y1="0" y2="0"></line>
+<line class="stroke-slate-200 dark:stroke-slate-700" stroke-dasharray="0.5 0.5" stroke-width="0.1" x1="0" x2="100" y1="10" y2="10"></line>
+<line class="stroke-slate-200 dark:stroke-slate-700" stroke-dasharray="0.5 0.5" stroke-width="0.1" x1="0" x2="100" y1="20" y2="20"></line>
+<line class="stroke-slate-200 dark:stroke-slate-700" stroke-dasharray="0.5 0.5" stroke-width="0.1" x1="0" x2="100" y1="30" y2="30"></line>
+<line class="stroke-slate-200 dark:stroke-slate-700" stroke-width="0.1" x1="0" x2="100" y1="40" y2="40"></line>
+<!-- Revenue Area & Path -->
+<path class="fill-primary/10" d="M0 35 L10 25 L25 28 L40 10 L60 20 L80 15 L100 5 V40 H0 Z"></path>
+<path class="stroke-primary" d="M0 35 L10 25 L25 28 L40 10 L60 20 L80 15 L100 5" fill="none" stroke-width="0.5"></path>
+<!-- Profit Path -->
+<path class="stroke-emerald-500" d="M0 38 L10 32 L25 35 L40 25 L60 30 L80 28 L100 22" fill="none" stroke-dasharray="1 0.5" stroke-width="0.5"></path>
+</svg>
+<div class="flex justify-between mt-4">
+<span class="text-[10px] text-slate-500">T2</span>
+<span class="text-[10px] text-slate-500">T3</span>
+<span class="text-[10px] text-slate-500">T4</span>
+<span class="text-[10px] text-slate-500">T5</span>
+<span class="text-[10px] text-slate-500">T6</span>
+<span class="text-[10px] text-slate-500">T7</span>
+<span class="text-[10px] text-slate-500">CN</span>
+</div>
+</div>
+</div>
+<!-- Donut Chart -->
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50">
+<h4 class="text-lg font-bold mb-6">Doanh thu theo danh mục</h4>
+<div class="flex items-center justify-center relative py-10">
+<svg class="size-48 transform -rotate-90">
+<circle class="stroke-slate-100 dark:stroke-slate-700" cx="96" cy="96" fill="transparent" r="80" stroke-width="16"></circle>
+<!-- Segment 1 -->
+<circle class="stroke-primary" cx="96" cy="96" fill="transparent" r="80" stroke-dasharray="502" stroke-dashoffset="150" stroke-width="16"></circle>
+<!-- Segment 2 -->
+<circle class="stroke-emerald-500" cx="96" cy="96" fill="transparent" r="80" stroke-dasharray="502" stroke-dashoffset="350" stroke-width="16"></circle>
+<!-- Segment 3 -->
+<circle class="stroke-amber-500" cx="96" cy="96" fill="transparent" r="80" stroke-dasharray="502" stroke-dashoffset="450" stroke-width="16"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-bold">100%</span>
+<span class="text-[10px] text-slate-500">Tổng quan</span>
+</div>
+</div>
+<div class="space-y-3 mt-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="text-xs">Động cơ &amp; Truyền động</span>
+</div>
+<span class="text-xs font-bold">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-emerald-500"></div>
+<span class="text-xs">Nội thất ô tô</span>
+</div>
+<span class="text-xs font-bold">30%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-amber-500"></div>
+<span class="text-xs">Phụ kiện điện tử</span>
+</div>
+<span class="text-xs font-bold">25%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Products Table -->
+<div class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/50 overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
+<h4 class="text-lg font-bold">Sản phẩm bán chạy</h4>
+<button class="text-primary text-sm font-bold hover:underline">Xem tất cả</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/80">
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500 tracking-wider">Sản phẩm</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500 tracking-wider">Danh mục</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500 tracking-wider">Đã bán</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500 tracking-wider">Doanh thu</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500 tracking-wider">Trạng thái</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Brake pads auto part product" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ8reBFhfp9bBjLrX6cyquwpVD40i47LDHUw8rFBmav0gxKZfgZE3-kFNdeRPrYgRHGvsfzX4hG9ZkbomZnUDlzJBC1QkaUUOIlryNirmAcHAL9TFdk5cL-ikoHT5rK8rFTCkejKnoCVi9WrPZK6mzky8Z3GFy_P2_nP27p5pSwihWPJfzeZeg_NNo8E0_yg1joUp-1OBOqfdmR7tIfOBhBtXflnWUXPHoxMzu5WhIkCCCXJg11vhYQ0lJ47rN78h07ktuwhuQN1I"/>
+</div>
+<span class="text-sm font-medium">Bộ Má Phanh Gốm Cao Cấp</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Hệ thống phanh</td>
+<td class="px-6 py-4 text-sm font-medium">452</td>
+<td class="px-6 py-4 text-sm font-bold">22.600.000₫</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-bold rounded uppercase">Còn hàng</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Car engine oil filter product" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOuCas6BsRT6VcAhkctbv_-AkynRuD3Y3jMpNcLFQ9CpDOako9g148bEdfkJ4tinDpXffudh6zOnfOO902Mec87FEzZEZJD-oOurKKfA7HbuY-ku-oKB-MHOh2NrXGFJ7EE_H-IqlLDQ2XhC58XpvlBEIO_WYp1ntQahV8kxo7oiWCKa1XLjGpniXpKrSIrlQJ0JVSKq14b42bys0Wq-Sx58Ww63sOiaIvgq-TsaWX3DryeaNJa2q3WNE5DRfO-VPdX6anOlzBzEw"/>
+</div>
+<span class="text-sm font-medium">Lọc Dầu Nhớt Động Cơ K&amp;N</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Động cơ</td>
+<td class="px-6 py-4 text-sm font-medium">328</td>
+<td class="px-6 py-4 text-sm font-bold">18.400.000₫</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-bold rounded uppercase">Còn hàng</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="High performance spark plugs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwz6r9YX6ZfwzuwcNR6JpWi_KF1m2ue0ttk1lvgCfMm9pTFD0Fv4m0GMAWLREGmupYiY85W45VQeg4Wo7j0Mp4kjwNjm4w8YDEg8tHVWN_ywZEaJGb19002XELP24j9srqunv1K9cRZDx7XJvc1XW1oomFUGDs2RlsYagAQsAmSa_CzMHvur_nk_UVtZGGOcxzie7aFmwHfFIyM_fxU-ICWLDsLfjdJ7UGhm_KZk6R9JYELXeAhtuvbiWD5bflIvwZsCsbxbNN8mM"/>
+</div>
+<span class="text-sm font-medium">Bugi Bạch Kim NGK (Bộ 4)</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Hệ thống đánh lửa</td>
+<td class="px-6 py-4 text-sm font-medium">215</td>
+<td class="px-6 py-4 text-sm font-bold">12.900.000₫</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-amber-500/10 text-amber-500 text-[10px] font-bold rounded uppercase">Sắp hết</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="LED headlight assembly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyrmdX7K8evdfrOiPWriDCNzJRX69iO0H7cMoqaBs36aw28vUhA6tmcSbIja_jLExeaISRMsxKKKSgNQcagTJz1h-798WlJMhX3W0fenaWsqhHNS20h_fXXfMc4ERKwmj8iMF2FDG1_yDx4QKaO2MmscD8gU-DmcWUuuOQN7n8l5GyoK_JuS7W3cR2DMJsBGZg2PeZ1q-6Auz1MqmHz-enoEjDDs1mBTDhBOYxwk2Z8cXoNsrGShH8Cw5t1UDG9bs8zzzHXFadcok"/>
+</div>
+<span class="text-sm font-medium">Đèn LED Siêu Sáng 360°</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Hệ thống chiếu sáng</td>
+<td class="px-6 py-4 text-sm font-medium">189</td>
+<td class="px-6 py-4 text-sm font-bold">9.450.000₫</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-bold rounded uppercase">Còn hàng</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</body></html>

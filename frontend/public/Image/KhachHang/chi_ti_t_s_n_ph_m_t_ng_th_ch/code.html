@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Chi Tiết Linh Kiện Xe</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">directions_car</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight">AutoParts Pro</h1>
+</div>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary text-sm" placeholder="Tìm kiếm linh kiện..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-primary text-[10px] text-white font-bold px-1.5 py-0.5 rounded-full">3</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary text-sm">person</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-8">
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+<!-- Product Gallery -->
+<div class="space-y-4">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-800 group cursor-zoom-in">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125" data-alt="Cận cảnh bộ lọc dầu nhớt ô tô chất lượng cao" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoLdLhepa8-NQPbTJP0ttJQEZSuZ7xPAE9fy6KUIIRK8gvU-mPjZbsnUh93XzyffDFr_Ec2JEhdk1B6HmR4cn7C5yC8CZXamFeoclSLpkE5ZpwMuzr8hCCV98cHNydVQucTBnQ1pAZVzk2BfazBsDEnugZgUxjcz7hbLg7c1Tc1uMjiGXFxaSvXO4w_2_plG1ve_3Wp0XJ8fHnLbPPQTbHVHSNCVZwNGEATMPSRSMJlIKEnDmKWCDXUkTH3YLnSEpqObegHEV0HVs"/>
+<div class="absolute bottom-4 right-4 bg-background-dark/60 backdrop-blur-sm text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">zoom_in</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<button class="aspect-square rounded-lg overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="Ảnh chi tiết 1 bộ lọc dầu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAbdOuMF2u17iVHjfIOUVSuAv1QYxn2qe6BvWwl-BDuzRS5E8a_8aJ29NuFrmz8XPLZyTRLhipZFzIwoWPrI_yxeXcLrErT0NhxTjRQdQlE8I0-uPZxPoeyNEiJai_-raE6MIlx7_jz0nPew2tDFWRRHmn2RIh-n7E1A8hOy9mqBKL8_9d2zB4bXhoF_5x4beAdn-x12NWT3PIstvZiyFTtz8oL9hu3CocDQz3GO7RB_FcBPDPVcdYi0QmoF4O2kFoNnP3QcW4pkQ"/>
+</button>
+<button class="aspect-square rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Ảnh chi tiết 2 bộ lọc dầu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3mmDhbMig1TOSZ9AoRrVz_cUnVfMupYyV-TDLetgvW_FNoSo4lYtZ1gqXjlAoDbNXafAY2YUDKQt7oqFkN5uRp_dBvHUZmO0gU26zXcYpywJEV1yOCjsBV1BchMWzEdGCZd3tFNWdoandh1Ez6_ZVy05W8QhQpFKraAZanXppe2bgDH5RbBMtVYgSiJgTIQcVe5M5_P9ji6wSCYU50rHmrLWNowXZUX9RfNh0fL6SfWIsfEYqvexFPhvOpWUnfcgQUYFQjIhs8ek"/>
+</button>
+<button class="aspect-square rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Ảnh chi tiết 3 bộ lọc dầu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGVWrDEqw2bonHCCXZ5Z7VDeQm-Xz8yRWA66n0cBJ4-bC524O7v9_z4ZgGQ7Rlu5PwVB3WPz_IwSakyNyNTJuLpTgVyVBToDbnrri5B18v6UXV13AW15yoxcTrVUmQPaz5_71K0djIDQPql_uTNkMYxeGleUY-NoEPwwR5K3-3N3WCRB56ld7k3yz81rv0ZS-Qz1Oeu7-54gEMDn0ZAlLCC1BeAPjDqZDLjV-Hf9emn9NZ8OSmB8QBLBRLpr10uIW3J0Z8yGAwNNc"/>
+</button>
+<button class="aspect-square rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-3xl">play_circle</span>
+</button>
+</div>
+</div>
+<!-- Product Info -->
+<div class="flex flex-col">
+<nav class="flex text-sm text-slate-500 dark:text-slate-400 mb-4 gap-2">
+<a class="hover:text-primary" href="#">Trang chủ</a>
+<span>/</span>
+<a class="hover:text-primary" href="#">Phụ tùng động cơ</a>
+<span>/</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">Bộ lọc dầu</span>
+</nav>
+<h1 class="text-3xl font-black mb-2 text-slate-900 dark:text-white leading-tight">
+                    Bộ lọc dầu nhớt động cơ cao cấp - Hiệu suất cao
+                </h1>
+<div class="flex flex-wrap items-center gap-4 mb-6">
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined">star_half</span>
+<span class="ml-2 text-sm font-semibold text-slate-600 dark:text-slate-400">(4.8/5 - 128 đánh giá)</span>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl mb-8 space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Mã sản phẩm (SKU):</span>
+<span class="font-mono font-bold text-slate-900 dark:text-slate-100">OLF-2023-PREMIUM</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Mã OEM:</span>
+<span class="font-mono font-bold text-slate-900 dark:text-slate-100">15400-PLM-A02</span>
+</div>
+<div class="flex justify-between text-sm border-t border-slate-200 dark:border-slate-700 pt-2 mt-2">
+<span class="text-slate-500 dark:text-slate-400">Tình trạng:</span>
+<span class="text-green-500 font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Còn hàng
+                        </span>
+</div>
+</div>
+<div class="mb-10">
+<div class="flex items-baseline gap-3 mb-2">
+<span class="text-4xl font-black text-primary">150.000đ</span>
+<span class="text-lg text-slate-400 line-through">210.000đ</span>
+<span class="bg-red-100 text-red-600 text-xs font-bold px-2 py-1 rounded">-30%</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Giá đã bao gồm VAT và chưa phí vận chuyển</p>
+</div>
+<div class="mt-auto space-y-4">
+<div class="flex gap-4">
+<div class="flex items-center border border-slate-300 dark:border-slate-700 rounded-lg">
+<button class="px-4 py-2 hover:text-primary">-</button>
+<input class="w-12 text-center bg-transparent border-none focus:ring-0 font-bold" type="number" value="1"/>
+<button class="px-4 py-2 hover:text-primary">+</button>
+</div>
+<button class="flex-1 bg-primary/10 hover:bg-primary/20 text-primary font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors border border-primary/20">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                            Thêm vào giỏ
+                        </button>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg text-lg shadow-lg shadow-primary/20 transition-all">
+                        Mua ngay
+                    </button>
+<div class="flex justify-between items-center text-xs text-slate-500 py-4">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_shipping</span> Giao hỏa tốc 2h</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified_user</span> Bảo hành 12 tháng</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">assignment_return</span> Đổi trả trong 7 ngày</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabs Section -->
+<div class="border-b border-slate-200 dark:border-slate-800 mb-8">
+<div class="flex gap-8">
+<button class="pb-4 border-b-2 border-primary text-primary font-bold">Tương thích xe</button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary">Thông số kỹ thuật</button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary">Hướng dẫn lắp đặt</button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary">Đánh giá (128)</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Left Column: Detailed Info -->
+<div class="lg:col-span-2 space-y-12">
+<!-- Vehicle Compatibility Table -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+                            Danh sách xe tương thích
+                        </h2>
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">filter_list</span>
+<input class="w-full text-xs bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg py-2 pl-8" placeholder="Lọc theo hãng xe..." type="text"/>
+</div>
+</div>
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+<table class="w-full text-left text-sm">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 uppercase text-xs font-bold">
+<tr>
+<th class="px-6 py-4">Hãng xe</th>
+<th class="px-6 py-4">Dòng xe (Model)</th>
+<th class="px-6 py-4">Đời xe (Year)</th>
+<th class="px-6 py-4">Động cơ</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30">
+<td class="px-6 py-4 font-bold">Honda</td>
+<td class="px-6 py-4">Civic, City, CR-V</td>
+<td class="px-6 py-4">2016 - 2024</td>
+<td class="px-6 py-4">1.5L Turbo, 1.8L, 2.0L</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30">
+<td class="px-6 py-4 font-bold">Toyota</td>
+<td class="px-6 py-4">Vios, Camry, Corolla Altis</td>
+<td class="px-6 py-4">2014 - 2023</td>
+<td class="px-6 py-4">1.5L, 2.0L, 2.5L</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30">
+<td class="px-6 py-4 font-bold">Mazda</td>
+<td class="px-6 py-4">Mazda 3, Mazda 6, CX-5</td>
+<td class="px-6 py-4">2015 - 2024</td>
+<td class="px-6 py-4">SkyActiv-G 1.5, 2.0, 2.5</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30">
+<td class="px-6 py-4 font-bold">Hyundai</td>
+<td class="px-6 py-4">Accent, Elantra, Tucson</td>
+<td class="px-6 py-4">2017 - 2024</td>
+<td class="px-6 py-4">1.4L, 1.6L, 2.0L</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30">
+<td class="px-6 py-4 font-bold">Kia</td>
+<td class="px-6 py-4">Cerato, K3, Seltos</td>
+<td class="px-6 py-4">2018 - 2024</td>
+<td class="px-6 py-4">1.4L Turbo, 1.6L, 2.0L</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-4 text-xs text-slate-500 italic">* Lưu ý: Danh sách này chỉ mang tính chất tham khảo. Vui lòng nhắn tin cho shop kèm số khung (VIN) để được tư vấn chính xác nhất.</p>
+</section>
+<!-- Technical Specs -->
+<section>
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">settings</span>
+                        Thông số kỹ thuật chi tiết
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex justify-between p-4 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-800/30">
+<span class="text-slate-500 dark:text-slate-400">Loại sản phẩm</span>
+<span class="font-semibold">Bộ lọc dầu vặn ren (Spin-on)</span>
+</div>
+<div class="flex justify-between p-4 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-800/30">
+<span class="text-slate-500 dark:text-slate-400">Vật liệu lọc</span>
+<span class="font-semibold">Sợi tổng hợp cao cấp</span>
+</div>
+<div class="flex justify-between p-4 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-800/30">
+<span class="text-slate-500 dark:text-slate-400">Kích thước ren</span>
+<span class="font-semibold">M20 x 1.5</span>
+</div>
+<div class="flex justify-between p-4 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-800/30">
+<span class="text-slate-500 dark:text-slate-400">Đường kính ngoài</span>
+<span class="font-semibold">68 mm</span>
+</div>
+<div class="flex justify-between p-4 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-800/30">
+<span class="text-slate-500 dark:text-slate-400">Chiều cao</span>
+<span class="font-semibold">85 mm</span>
+</div>
+<div class="flex justify-between p-4 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-800/30">
+<span class="text-slate-500 dark:text-slate-400">Van một chiều</span>
+<span class="font-semibold text-green-500 font-bold">Có (Silicon)</span>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section>
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">reviews</span>
+                        Đánh giá từ khách hàng
+                    </h2>
+<!-- Review Summary -->
+<div class="flex flex-col md:flex-row gap-8 items-center bg-primary/5 p-8 rounded-2xl mb-8 border border-primary/10">
+<div class="text-center">
+<div class="text-5xl font-black text-primary mb-2">4.8</div>
+<div class="flex text-yellow-500 mb-1">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<div class="text-xs text-slate-500">Dựa trên 128 lượt mua</div>
+</div>
+<div class="flex-1 w-full space-y-2">
+<div class="flex items-center gap-4 text-sm">
+<span class="w-4">5</span>
+<div class="flex-1 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+<span class="w-8 text-right">85%</span>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<span class="w-4">4</span>
+<div class="flex-1 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[10%]"></div>
+</div>
+<span class="w-8 text-right">10%</span>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<span class="w-4">3</span>
+<div class="flex-1 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[3%]"></div>
+</div>
+<span class="w-8 text-right">3%</span>
+</div>
+<div class="flex items-center gap-4 text-sm opacity-30">
+<span class="w-4">2</span>
+<div class="flex-1 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[1%]"></div>
+</div>
+<span class="w-8 text-right">1%</span>
+</div>
+<div class="flex items-center gap-4 text-sm opacity-30">
+<span class="w-4">1</span>
+<div class="flex-1 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[1%]"></div>
+</div>
+<span class="w-8 text-right">1%</span>
+</div>
+</div>
+</div>
+<!-- Individual Reviews -->
+<div class="space-y-6">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-primary">NT</div>
+<div>
+<div class="font-bold">Nguyễn Thành</div>
+<div class="text-xs text-green-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Đã mua hàng
+                                        </div>
+</div>
+</div>
+<div class="text-xs text-slate-500">2 ngày trước</div>
+</div>
+<div class="flex text-yellow-500 text-sm mb-2">
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+</div>
+<p class="text-slate-700 dark:text-slate-300">Sản phẩm rất chất lượng, đóng gói kỹ càng. Mình lắp cho Honda Civic 2020 thấy rất khít, ren mượt. Giá này quá tốt so với hãng.</p>
+<div class="mt-4 flex gap-2">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="Ảnh thật khách hàng chụp bộ lọc" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0MqcREHi3lVpoLTDQ_ZFM9GiYVHp2Q-7tpNwGx-mSwHo4uBHPEJYPQCBpIRZLKFercM6id-t4DAb-ojragpgXhlvcjzl38YlYg-faGn_uYcyRlc6rEmpRkf8x8KB-4Q0HTMU-FNimDn4uuwmzco2wzsR4dep4YO8MBZSkcRbf6NAopFPIkrSNeO9FLRa-KCqAtR-jwKs0MX3i19HpppwQ6vmBSWtp9M86xdrjtaFnbi1_5ixHncBVK3FT8c9kKdBoBCAlrqBi-Ug"/>
+</div>
+</div>
+<div class="p-6 border-b border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-primary">LA</div>
+<div>
+<div class="font-bold">Lê Anh</div>
+<div class="text-xs text-green-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Đã mua hàng
+                                        </div>
+</div>
+</div>
+<div class="text-xs text-slate-500">1 tuần trước</div>
+</div>
+<div class="flex text-yellow-500 text-sm mb-2">
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined fill-1 text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+<p class="text-slate-700 dark:text-slate-300">Giao hàng nhanh, đúng mẫu mã. Chất lượng hoàn thiện tốt, cầm chắc tay. Sẽ ủng hộ shop lâu dài.</p>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-primary font-bold hover:bg-primary/5 rounded-lg border border-primary/20 transition-colors">Xem tất cả 128 đánh giá</button>
+</section>
+</div>
+<!-- Right Column: Sidebar / Related -->
+<div class="space-y-8">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_offer</span>
+                        Ưu đãi đặc biệt
+                    </h3>
+<ul class="space-y-3 text-sm">
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span>Giảm 10% khi mua từ 3 bộ lọc trở lên.</span>
+</li>
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span>Miễn phí vận chuyển cho đơn hàng từ 500.000đ.</span>
+</li>
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span>Tặng kèm long đền xả nhớt silicon.</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold mb-4 text-lg">Sản phẩm thường mua cùng</h3>
+<div class="space-y-4">
+<div class="flex gap-3 group">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-700">
+<img class="w-full h-full object-cover" data-alt="Ảnh dầu nhớt tổng hợp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYIrQrJtSSIt4uJOiBkif8hSpTrAlOCPmD_GLm_Jbx_IiooYX_vTNeuJ_hscwLSFwtVB2RukhvxNsyn4NypFKsy6ROcj-nNcv9LdAcmOpfX3WEBoAT_T7rBX0un86dxqNy3-RzC4pJua_ewFhC2GMuS55s5E_riMnwDJ702bAvTVo2TTFympAIznLi7Mp70ci5WadP308R-DlIaXXOD8WYOtY50YhnJ5Xi6D1jQ7WeuWPwJsda8lqk_I4bLzYZOeH6Le5IDiY3Dhc"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-semibold group-hover:text-primary transition-colors">Dầu nhớt tổng hợp 5W-30 (4L)</h4>
+<p class="text-primary font-bold text-sm">750.000đ</p>
+<button class="mt-1 text-xs text-slate-500 hover:text-primary underline">Thêm nhanh</button>
+</div>
+</div>
+<div class="flex gap-3 group">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-700">
+<img class="w-full h-full object-cover" data-alt="Ảnh dụng cụ mở lọc dầu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPK5_1bSRonUi0Ut4uTWBf99CXqsjCOetHa1injCuKrXcil2YN1VuWQ2QmBPg5B1CeagD7su9yVkU6wUxX_ol6p8vMABZ3EEEUaO2TB1iuGu6Ji_XFb6Ae1RenGcwvN-mPBHbjo26Ajk_nM_sVD4KxqKno_FLO5qcOOOTXwXpebqCrvt_bMzyNfn64Ai8m-hozk848hVTatYehX71TEdFsOKDPN-py78JTdSl9RYvGvN3jQTi7oIbYye8OQGVW_oxr9VOizrCiV_k"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-semibold group-hover:text-primary transition-colors">Vam tháo lọc dầu chuyên dụng</h4>
+<p class="text-primary font-bold text-sm">120.000đ</p>
+<button class="mt-1 text-xs text-slate-500 hover:text-primary underline">Thêm nhanh</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 p-6 rounded-xl border border-primary/20">
+<h3 class="font-bold mb-2">Cần hỗ trợ kỹ thuật?</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Đội ngũ kỹ thuật của chúng tôi sẵn sàng giải đáp thắc mắc về lắp đặt.</p>
+<button class="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-sm">chat</span> Nhắn tin ngay
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-12">
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">directions_car</span>
+<span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">AutoParts Pro</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Chuyên cung cấp linh kiện, phụ tùng ô tô chính hãng và thay thế chất lượng cao.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Sản phẩm</h4>
+<ul class="text-sm space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Động cơ</a></li>
+<li><a class="hover:text-primary" href="#">Hệ thống phanh</a></li>
+<li><a class="hover:text-primary" href="#">Giảm xóc</a></li>
+<li><a class="hover:text-primary" href="#">Lọc gió/Lọc dầu</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Hỗ trợ</h4>
+<ul class="text-sm space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Chính sách bảo hành</a></li>
+<li><a class="hover:text-primary" href="#">Hướng dẫn mua hàng</a></li>
+<li><a class="hover:text-primary" href="#">Tra cứu đơn hàng</a></li>
+<li><a class="hover:text-primary" href="#">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Đăng ký nhận tin</h4>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-100 dark:bg-slate-800 border-none rounded py-2 px-3 text-sm" placeholder="Email của bạn" type="email"/>
+<button class="bg-primary text-white p-2 rounded">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500">
+            © 2024 AutoParts Pro. Bản quyền thuộc về Công ty TNHH Phụ Tùng Auto.
+        </div>
+</footer>
+</body></html>

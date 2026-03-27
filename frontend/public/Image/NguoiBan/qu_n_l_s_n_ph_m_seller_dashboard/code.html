@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex min-h-screen overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shrink-0 hidden md:flex flex-col">
+<div class="p-6 flex flex-col h-full">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">storefront</span>
+</div>
+<div>
+<h1 class="text-base font-bold leading-tight">Kênh Người Bán</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Quản trị viên</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1 grow">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Bảng điều khiển</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="text-sm font-medium">Sản phẩm</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span class="text-sm font-medium">Đơn hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">Khách hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="text-sm font-medium">Báo cáo</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">Cài đặt</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0">
+<!-- Header -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 backdrop-blur-sm flex items-center justify-between px-8 sticky top-0 z-10">
+<h2 class="text-xl font-bold">Quản lý sản phẩm</h2>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+<img alt="User" class="w-full h-full object-cover" data-alt="User profile avatar image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJP0beD-SjSFscuHIVmkwL5xhqS4aDo6YSm_cnM3zzFBNskpdD0rESuAbS2EK7nubnnf140beiQKKIV-e7gm8F6USmpQb1cXBCWlU6SBpmIthchs9XVtAr4aQ61x1L3t_MMLgSlU7LtldAcNFf_K9rXhesO6eSX425fjonGLP4Le_o0tRmDtVgtT39Fq60AL23jwmMPC3PoL0doB7aUoJ3zrhl6zcip7M6yV-3jKocq5ZDKRWNNJrBuk2WiX9hrx_Az4BDE04jg_E"/>
+</div>
+</div>
+</header>
+<div class="p-8 space-y-6">
+<!-- Toolbar Actions -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex-1 max-w-xl">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none text-sm transition-all" placeholder="Tìm kiếm theo tên sản phẩm, SKU..." type="text"/>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 justify-center transition-all">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                    Thêm sản phẩm mới
+                </button>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Danh mục:</span>
+<select class="bg-transparent border-none text-sm p-0 focus:ring-0 cursor-pointer font-medium">
+<option>Tất cả</option>
+<option>Điện thoại</option>
+<option>Laptop</option>
+<option>Phụ kiện</option>
+</select>
+</div>
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Trạng thái:</span>
+<div class="flex gap-1">
+<button class="px-3 py-0.5 rounded-md text-sm font-medium bg-white dark:bg-slate-700 shadow-sm">Tất cả</button>
+<button class="px-3 py-0.5 rounded-md text-sm font-medium text-slate-500 hover:bg-white dark:hover:bg-slate-700">Đang bán</button>
+<button class="px-3 py-0.5 rounded-md text-sm font-medium text-slate-500 hover:bg-white dark:hover:bg-slate-700">Chờ duyệt</button>
+<button class="px-3 py-0.5 rounded-md text-sm font-medium text-slate-500 hover:bg-white dark:hover:bg-slate-700">Đã ẩn</button>
+</div>
+</div>
+</div>
+<!-- Product Table -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider w-12">
+<input class="rounded border-slate-300 text-primary focus:ring-primary dark:bg-slate-800 dark:border-slate-700" type="checkbox"/>
+</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Sản phẩm</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Giá bán</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Kho hàng</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center">Trạng thái</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Thao tác</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<!-- Product Row 1 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary dark:bg-slate-800 dark:border-slate-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0 border border-slate-200 dark:border-slate-700">
+<img alt="Phone" class="w-full h-full object-cover" data-alt="iPhone 15 Pro Max high quality photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr4udvvncF5RBRtJ1u9iXh2pPX-aqX0NDd9AG7Z55ymMjPV5hYMSQ5X-0IFG43FXAPPeC6JJdRM5b5B6_P_6ZPTkRRwnLWnNhx9syPUhT_Np0CfQrg_xb0FVth9Jhmf8H6qnfJbUCQQASH8I2CEdsb7WFmTWlu6aYPHv0i4S1G_qqA05zHGYnoBD3J_yYPEt5OArZKviuGFQQEGuzFZ8yhVKFC4xKXBsd5JpaMRoHPzPEcl1wDTNcbsHCsRVjzOcHDKgEjXybbLZM"/>
+</div>
+<div class="min-w-0">
+<p class="font-semibold text-sm truncate">iPhone 15 Pro Max 256GB</p>
+<p class="text-xs text-slate-500">SKU: IP15PM-256-BLUE</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm font-semibold">28.500.000đ</p>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">45 cái</p>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 ring-1 ring-inset ring-green-600/20">Đang bán</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center justify-end gap-2">
+<button class="p-1.5 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" title="Xem">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1.5 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" title="Sửa">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 hover:bg-red-500/10 hover:text-red-500 rounded-lg transition-colors" title="Xóa">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product Row 2 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary dark:bg-slate-800 dark:border-slate-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0 border border-slate-200 dark:border-slate-700">
+<img alt="Laptop" class="w-full h-full object-cover" data-alt="MacBook Pro M3 Max sleek laptop photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdHGJfW25ndPJm7jwLGBTqf82b69SDOK0FnnlXsceJKST7bQ-C8LkwCRQuIibJJt5gpnlp_vGLQFRsgtbaUFqMmy8Gs361sjb_aZBCiceu6RbjiQqN6eU39Mmy8MYZXWPAMDQg-BylDIDlz4ADtvQyEqsmoUMmGuDstG8P24goPHUO9B2NJGe0CVb51JHCjw-W157Nvc9hAU9JLr93RajSjkpqyvLl6Deu030oz8PqiFmPTyzg9l9prP7ygBPhuNikoLSGZIzPaB4"/>
+</div>
+<div class="min-w-0">
+<p class="font-semibold text-sm truncate">MacBook Pro M3 Max 14 inch</p>
+<p class="text-xs text-slate-500">SKU: MBP-M3-14-BLK</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm font-semibold">54.900.000đ</p>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">12 cái</p>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 ring-1 ring-inset ring-amber-600/20">Chờ duyệt</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center justify-end gap-2">
+<button class="p-1.5 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1.5 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 hover:bg-red-500/10 hover:text-red-500 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product Row 3 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary dark:bg-slate-800 dark:border-slate-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0 border border-slate-200 dark:border-slate-700">
+<img alt="Headphone" class="w-full h-full object-cover" data-alt="Sony Noise Cancelling Headphones image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsIL4MvAEzHSe0rCgfZchcrXAef02io-WYhF0ZFZbVlfZQd7dPUv7CdoNtTYyEuiCrmQFM356NTzt8Kr4SvlnIYFwpjERrE7XnsaCtTr-OZJBc0KFPvQdxzCcE_BSpCTbrgHvvh0n3RvMUgH3EtipWheAQjEHoce_xG9hUS1OwdQnuR_vAzvmyT1awrd4uFFYpNmzydCG51r0661cdJ3QunBt0s0PJ64LEhkvFgWehkKF-ezHc84EN4nMMNZttMRWv1iPqdC6N-Tw"/>
+</div>
+<div class="min-w-0">
+<p class="font-semibold text-sm truncate">Sony WH-1000XM5 Headphones</p>
+<p class="text-xs text-slate-500">SKU: SN-XM5-WHT</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm font-semibold">8.400.000đ</p>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">0 cái</p>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400 ring-1 ring-inset ring-slate-600/20">Đã ẩn</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center justify-end gap-2">
+<button class="p-1.5 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1.5 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 hover:bg-red-500/10 hover:text-red-500 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-between border-t border-slate-200 dark:border-slate-800">
+<p class="text-sm text-slate-500">Hiển thị 1 - 3 trong tổng số 45 sản phẩm</p>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 disabled:opacity-50">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary text-white text-sm font-semibold">1</button>
+<button class="w-8 h-8 rounded hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-medium">2</button>
+<button class="w-8 h-8 rounded hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-medium">3</button>
+<button class="p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Quản lý đơn hàng</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-4 md:px-10 py-4 bg-white dark:bg-slate-900/50 sticky top-0 z-50 backdrop-blur-md">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/10">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">OrderManager</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-slate-800 border border-transparent focus-within:border-primary">
+<div class="text-slate-500 dark:text-slate-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full min-w-0 flex-1 bg-transparent border-none focus:ring-0 text-sm font-normal px-2 placeholder:text-slate-500" placeholder="Tìm kiếm đơn hàng..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-4 py-8">
+<div class="mb-8">
+<h1 class="text-2xl md:text-3xl font-bold mb-2">Đơn hàng của tôi</h1>
+<p class="text-slate-500 dark:text-slate-400">Theo dõi và quản lý lịch sử mua sắm của bạn</p>
+</div>
+<div class="flex border-b border-slate-200 dark:border-slate-800 mb-8 overflow-x-auto no-scrollbar">
+<button class="flex-none px-6 py-3 border-b-2 border-primary text-primary font-semibold text-sm transition-all">
+                        Chờ xác nhận
+                    </button>
+<button class="flex-none px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary font-medium text-sm transition-all">
+                        Đang xử lý
+                    </button>
+<button class="flex-none px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary font-medium text-sm transition-all">
+                        Đang giao
+                    </button>
+<button class="flex-none px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary font-medium text-sm transition-all">
+                        Đã giao
+                    </button>
+<button class="flex-none px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary font-medium text-sm transition-all">
+                        Đã hủy
+                    </button>
+</div>
+<div class="space-y-6">
+<div class="bg-white dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-4 md:p-6 border-b border-slate-200 dark:border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">package_2</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Mã đơn: #DH12459</h3>
+<p class="text-sm text-slate-500">Ngày đặt: 24/10/2023</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end">
+<span class="text-primary font-bold text-xl">1.250.000đ</span>
+<span class="text-xs px-2 py-1 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 font-medium">Chờ xác nhận</span>
+</div>
+</div>
+<div class="p-4 md:p-6 bg-slate-50/50 dark:bg-slate-800/20">
+<div class="flex items-center justify-between mb-4">
+<p class="text-sm font-medium">Trạng thái vận chuyển</p>
+<p class="text-sm text-primary font-semibold">20%</p>
+</div>
+<div class="relative flex items-center justify-between w-full mt-8 mb-4">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 h-1 w-full bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 h-1 w-[20%] bg-primary rounded-full"></div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-primary text-white flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-primary">Đã đặt</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-400 flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-slate-400">Đã xác nhận</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-400 flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-slate-400">Đang giao</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-400 flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-slate-400">Hoàn thành</span>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-center">
+<p class="text-sm text-slate-500">Dự kiến giao: <span class="text-slate-900 dark:text-slate-100 font-medium">27/10/2023</span></p>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20">
+                                    Xem chi tiết
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm opacity-90">
+<div class="p-4 md:p-6 border-b border-slate-200 dark:border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">package_2</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Mã đơn: #DH12450</h3>
+<p class="text-sm text-slate-500">Ngày đặt: 20/10/2023</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end">
+<span class="text-primary font-bold text-xl">540.000đ</span>
+<span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-medium">Đang xử lý</span>
+</div>
+</div>
+<div class="p-4 md:p-6 bg-slate-50/50 dark:bg-slate-800/20">
+<div class="flex items-center justify-between mb-4">
+<p class="text-sm font-medium">Trạng thái vận chuyển</p>
+<p class="text-sm text-primary font-semibold">45%</p>
+</div>
+<div class="relative flex items-center justify-between w-full mt-8 mb-4">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 h-1 w-full bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 h-1 w-[45%] bg-primary rounded-full"></div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-primary text-white flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-primary">Đã đặt</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-primary text-white flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-primary">Đã xác nhận</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-400 flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-slate-400">Đang giao</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-400 flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-slate-400">Hoàn thành</span>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-center">
+<p class="text-sm text-slate-500">Dự kiến giao: <span class="text-slate-900 dark:text-slate-100 font-medium">25/10/2023</span></p>
+<button class="bg-primary/10 hover:bg-primary/20 text-primary px-6 py-2 rounded-lg font-bold text-sm transition-all border border-primary/20">
+                                    Xem chi tiết
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm opacity-90">
+<div class="p-4 md:p-6 border-b border-slate-200 dark:border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">package_2</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Mã đơn: #DH12448</h3>
+<p class="text-sm text-slate-500">Ngày đặt: 18/10/2023</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end">
+<span class="text-primary font-bold text-xl">2.100.000đ</span>
+<span class="text-xs px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-medium">Đã giao</span>
+</div>
+</div>
+<div class="p-4 md:p-6 bg-slate-50/50 dark:bg-slate-800/20">
+<div class="flex items-center justify-between mb-4">
+<p class="text-sm font-medium text-green-600 dark:text-green-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span> Giao hàng thành công
+                                </p>
+<p class="text-sm text-green-600 dark:text-green-400 font-semibold">100%</p>
+</div>
+<div class="relative flex items-center justify-between w-full mt-8 mb-4">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 h-1 w-full bg-green-500 rounded-full"></div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-green-500 text-white flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-green-500">Đã đặt</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-green-500 text-white flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-green-500">Đã xác nhận</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-green-500 text-white flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-green-500">Đang giao</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="size-8 rounded-full bg-green-500 text-white flex items-center justify-center ring-4 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-[10px] md:text-xs font-medium text-green-500">Hoàn thành</span>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-center">
+<p class="text-sm text-slate-500">Hoàn tất lúc: <span class="text-slate-900 dark:text-slate-100 font-medium">21/10/2023</span></p>
+<button class="bg-primary/10 hover:bg-primary/20 text-primary px-6 py-2 rounded-lg font-bold text-sm transition-all border border-primary/20">
+                                    Xem chi tiết
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/20 border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="size-16 rounded-full bg-white dark:bg-slate-800 shadow-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">support_agent</span>
+</div>
+<div>
+<h4 class="text-lg font-bold">Cần hỗ trợ về đơn hàng?</h4>
+<p class="text-slate-600 dark:text-slate-400">Đội ngũ CSKH của chúng tôi sẵn sàng giúp đỡ bạn 24/7</p>
+</div>
+</div>
+<button class="whitespace-nowrap bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition-transform">
+                        Liên hệ ngay
+                    </button>
+</div>
+</main>
+<footer class="mt-12 border-t border-slate-200 dark:border-slate-800 py-8 px-4 text-center text-slate-500 text-sm">
+<p>© 2023 OrderManager System. Tất cả quyền được bảo lưu.</p>
+</footer>
+</div>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

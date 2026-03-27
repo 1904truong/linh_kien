@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Quên mật khẩu - Khôi phục tài khoản</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col justify-center items-center p-4">
+<!-- Main Container -->
+<div class="w-full max-w-md">
+<!-- Logo/Header Area -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 mb-6">
+<span class="material-icons text-primary text-4xl">lock_reset</span>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Quên mật khẩu?</h1>
+<p class="text-slate-600 dark:text-slate-400">Đừng lo lắng, chúng tôi sẽ gửi hướng dẫn đặt lại mật khẩu cho bạn.</p>
+</div>
+<!-- Form Card -->
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-8 rounded-xl shadow-xl backdrop-blur-sm">
+<form action="#" class="space-y-6" method="POST">
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 ml-1" for="email">
+                        Địa chỉ Email
+                    </label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-slate-400 group-focus-within:text-primary transition-colors text-xl">email</span>
+</div>
+<input class="block w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder-slate-400 dark:placeholder-slate-500" id="email" name="email" placeholder="ten@vidu.com" required="" type="email"/>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-4 rounded-lg shadow-lg shadow-primary/20 transition-all transform active:scale-[0.98] flex items-center justify-center space-x-2" type="submit">
+<span>Gửi liên kết khôi phục</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+</form>
+<!-- Success Message (Hidden by default, used for demonstration style) -->
+<!-- 
+            <div class="mt-6 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-start space-x-3">
+                <span class="material-icons text-emerald-500">check_circle</span>
+                <p class="text-sm text-emerald-600 dark:text-emerald-400">Email khôi phục đã được gửi. Vui lòng kiểm tra hộp thư đến của bạn.</p>
+            </div> 
+            -->
+</div>
+<!-- Footer Links -->
+<div class="mt-8 text-center space-y-4">
+<a class="inline-flex items-center text-sm font-medium text-primary hover:underline transition-all" href="#">
+<span class="material-icons text-sm mr-1">arrow_back</span>
+                Quay lại đăng nhập
+            </a>
+<div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex justify-center items-center space-x-6">
+<a class="text-xs text-slate-500 hover:text-primary transition-colors uppercase tracking-wider" href="#">Hỗ trợ</a>
+<span class="h-1 w-1 rounded-full bg-slate-400"></span>
+<a class="text-xs text-slate-500 hover:text-primary transition-colors uppercase tracking-wider" href="#">Bảo mật</a>
+<span class="h-1 w-1 rounded-full bg-slate-400"></span>
+<a class="text-xs text-slate-500 hover:text-primary transition-colors uppercase tracking-wider" href="#">Điều khoản</a>
+</div>
+</div>
+</div>
+<!-- Decoration Elements -->
+<div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10"></div>
+<div class="fixed top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed bottom-20 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+<!-- Optional Illustration Component (Subtle) -->
+<div class="hidden lg:block fixed bottom-8 left-8 max-w-[200px] opacity-20">
+<img class="w-full h-auto rounded-xl grayscale" data-alt="Abstract blue gradient pattern for background decoration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEArhV7D7CLvDcTbRs2ah06PDn34RchIXO-UVxDDzEj0OUQVnvQV91oUJR_-w1RPZ4qKm_clbs2NWWKtUtMNHrVWi00jKk_2PMs9eLtWc34tOwoT_jXMsZHMahEouVy2QbHsYLguRo9TVKSwlPAg2mTe5tmz4i5jRh5URV1QR6SP9-C5UIqLW0Qp3oqYdOLl0lLr_hR88hOml-_oFHnC7QUl52nUjmiFmoMIsTDVppaahUJq0KXChUoACPARGe1DbYdmU6k0phKkg"/>
+</div>
+</body></html>

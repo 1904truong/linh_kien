@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thêm Sản Phẩm Mới - Kênh Người Bán</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex flex-col sticky top-0 h-screen">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<div>
+<h1 class="text-sm font-bold uppercase tracking-wider">Kênh Người Bán</h1>
+<p class="text-xs text-slate-500">Quản trị viên</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Bảng điều khiển</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg transition-colors border border-primary/20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">inventory_2</span>
+<span class="text-sm font-medium">Sản phẩm</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-sm font-medium">Đơn hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">warehouse</span>
+<span class="text-sm font-medium">Kho hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Báo cáo</span>
+</a>
+<div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Cài đặt</span>
+</a>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-3 flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-300 dark:bg-slate-600 overflow-hidden">
+<img alt="Avatar" data-alt="Ảnh đại diện người dùng quản trị" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARfPR02F_N5CVuErPRsD5BRshDcIQA7u2U_XoAqugRwpdghbhocZD9cr_5BGu3_kHGqxCJf0GcSUpCWmlvPJlqJuPNsDrF6lUz5UDsUbkcDlQLrdle6XBBWCa1_GuEo7LOdel9ijfjjM4Tus-z9KHK6Zg3umqVcSu218n4HsmXNQj7V9KYBxkvorRnnmh_caNBjKPHQwdHts5t1EqxMTWWpWs1zPtfW1Js8qq2gvYVBV4yBpzbx-3Q3h9QgZRtfe6wznMIK7QJPEQ"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-bold truncate">Nguyễn Văn A</p>
+<p class="text-[10px] text-slate-500 truncate">Sửa đổi lần cuối: 2 phút trước</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-sm">logout</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto bg-slate-50 dark:bg-background-dark/50">
+<!-- Header -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur flex items-center justify-between px-8 sticky top-0 z-10">
+<div class="flex items-center gap-2 text-sm">
+<span class="text-slate-400">Sản phẩm</span>
+<span class="material-symbols-outlined text-xs text-slate-400">chevron_right</span>
+<span class="font-medium">Thêm sản phẩm mới</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm">publish</span>
+                    Đăng sản phẩm
+                </button>
+</div>
+</header>
+<!-- Form Content -->
+<div class="max-w-5xl mx-auto p-8 space-y-8">
+<section class="flex justify-between items-end">
+<div class="space-y-1">
+<h2 class="text-3xl font-bold tracking-tight">Thêm sản phẩm mới</h2>
+<p class="text-slate-500 dark:text-slate-400">Cung cấp thông tin chi tiết để tối ưu hóa khả năng tìm kiếm của khách hàng.</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 text-sm font-medium border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Lưu bản nháp</button>
+</div>
+</section>
+<!-- Grid Layout for sections -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Main Form Sections -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Basic Info -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+<h3 class="font-bold">Thông tin cơ bản</h3>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Tên sản phẩm <span class="text-red-500">*</span></label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary" placeholder="Ví dụ: Má phanh trước Toyota Camry 2020" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Thương hiệu</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary">
+<option>Chọn thương hiệu</option>
+<option>Toyota Genuine Parts</option>
+<option>Bosch</option>
+<option>Denso</option>
+<option>Brembo</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Mã OEM / Part Number</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary" placeholder="Ví dụ: 04465-06150" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Category & Compatibility -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">category</span>
+<h3 class="font-bold">Phân loại &amp; Tương thích</h3>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Danh mục sản phẩm <span class="text-red-500">*</span></label>
+<div class="grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center p-4 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary mb-1">settings_input_component</span>
+<span class="text-xs font-medium">Hệ thống phanh</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 border border-primary bg-primary/5 rounded-lg transition-all group">
+<span class="material-symbols-outlined text-primary mb-1">earth_engine</span>
+<span class="text-xs font-medium">Động cơ</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary mb-1">lightbulb</span>
+<span class="text-xs font-medium">Hệ thống điện</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Dòng xe tương thích</label>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full border border-primary/20">
+                                        Toyota Camry (2018-2024)
+                                        <button class="material-symbols-outlined text-sm leading-none">close</button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full border border-primary/20">
+                                        Toyota Avalon (2019-2022)
+                                        <button class="material-symbols-outlined text-sm leading-none">close</button>
+</span>
+<button class="inline-flex items-center gap-1 px-3 py-1 border border-dashed border-slate-300 dark:border-slate-700 text-slate-500 text-xs font-medium rounded-full hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xs">add</span>
+                                        Thêm dòng xe
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Description -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+<h3 class="font-bold">Mô tả sản phẩm</h3>
+</div>
+<div class="p-6">
+<div class="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
+<div class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 p-2 flex gap-2">
+<button class="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded"><span class="material-symbols-outlined text-sm">format_bold</span></button>
+<button class="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded"><span class="material-symbols-outlined text-sm">format_italic</span></button>
+<button class="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded"><span class="material-symbols-outlined text-sm">format_list_bulleted</span></button>
+<div class="w-px h-4 bg-slate-300 dark:bg-slate-600 my-auto mx-1"></div>
+<button class="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded"><span class="material-symbols-outlined text-sm">link</span></button>
+<button class="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded"><span class="material-symbols-outlined text-sm">image</span></button>
+</div>
+<textarea class="w-full bg-transparent border-none focus:ring-0 p-4 text-sm" placeholder="Nhập mô tả chi tiết về sản phẩm, bao gồm tình trạng, chất liệu, tính năng nổi bật..." rows="6"></textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Media, Price & Stock -->
+<div class="space-y-8">
+<!-- Images Upload -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">image</span>
+<h3 class="font-bold">Hình ảnh sản phẩm</h3>
+</div>
+<div class="p-6 space-y-4">
+<div class="grid grid-cols-2 gap-2">
+<div class="aspect-square bg-slate-100 dark:bg-slate-800 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg flex flex-col items-center justify-center text-slate-400 cursor-pointer hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined text-3xl mb-1">add_a_photo</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Ảnh chính</span>
+</div>
+<div class="aspect-square bg-slate-100 dark:bg-slate-800 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg flex items-center justify-center text-slate-400 cursor-pointer hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined text-2xl">add</span>
+</div>
+</div>
+<p class="text-[11px] text-slate-500 text-center">Định dạng JPG, PNG. Tối đa 5MB mỗi ảnh. Nên sử dụng ảnh nền trắng.</p>
+</div>
+</div>
+<!-- Price & Stock -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">payments</span>
+<h3 class="font-bold">Giá &amp; Kho hàng</h3>
+</div>
+<div class="p-6 space-y-5">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Giá bán (VND) <span class="text-red-500">*</span></label>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary pl-4 pr-12" placeholder="0" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">₫</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Số lượng tồn kho <span class="text-red-500">*</span></label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary" placeholder="0" type="number"/>
+</div>
+<div class="pt-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:bg-primary transition-colors"></div>
+<div class="absolute left-1 top-1 bg-white size-3 rounded-full transition-all peer-checked:left-6"></div>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Cho phép đặt trước (Pre-order)</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Visibility Card -->
+<div class="bg-gradient-to-br from-primary to-blue-600 rounded-xl p-6 text-white shadow-lg shadow-primary/20">
+<h4 class="font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                            Trạng thái hiển thị
+                        </h4>
+<p class="text-xs text-white/80 mb-4">Sản phẩm sẽ được hiển thị ngay lập tức trên cửa hàng sau khi đăng.</p>
+<select class="w-full bg-white/10 border-white/20 text-white rounded-lg focus:ring-white/30 text-sm">
+<option class="text-slate-900">Hiển thị (Công khai)</option>
+<option class="text-slate-900">Ẩn (Chờ duyệt)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Footer Action Bar -->
+<div class="pt-8 flex items-center justify-end gap-4 border-t border-slate-200 dark:border-slate-800">
+<button class="px-6 py-2.5 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Hủy bỏ</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-2.5 rounded-lg font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">check_circle</span>
+                    Đăng sản phẩm ngay
+                </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

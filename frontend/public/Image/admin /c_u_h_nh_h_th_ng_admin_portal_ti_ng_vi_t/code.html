@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<title>Cấu hình hệ thống - Admin Portal</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
+<!-- Sidebar -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 flex flex-col bg-white dark:bg-background-dark shrink-0 h-screen sticky top-0">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary rounded-lg p-2 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">settings_suggest</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">Admin Portal</h2>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Tổng quan</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-semibold">Cấu hình hệ thống</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">Quản lý người dùng</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Báo cáo</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">database</span>
+<span class="text-sm font-medium">Dữ liệu Master</span>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Avatar of the system administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXL3Gi4vEKnUiZaZb7A9VqypY4MOf3k26clrqe0qF_k4yTXid9oYB8AcieqtV_yDHKFiDJewrOSzCNh04OOeCOpAZs5yz8sm8901ILkCNxcgITX5TPgf0xdWAAb5WLl99NlfeeCm4nbyn8L4mYoA4aupqiCnXEkE_bDdGjqPFAqdfvmVykmXKIROc_Bjr68U7ruMqlVqMJsyiVagG_hQREmHEPsQdoRdx1nHE2NM9NH6gUJ-M0Kk7RhhZeDP-K8g1kGm5WP_wfcU4"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">Quản trị viên</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Hệ thống Master Data</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-screen overflow-y-auto">
+<!-- Header -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 bg-white dark:bg-background-dark sticky top-0 z-10">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary text-slate-900 dark:text-white" placeholder="Tìm kiếm cấu hình..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-2 cursor-pointer">
+<span class="text-sm font-medium">VN</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+</header>
+<!-- Page Hero -->
+<div class="px-8 py-8">
+<div class="flex flex-wrap justify-between items-end gap-4 mb-8">
+<div>
+<h1 class="text-4xl font-black text-slate-900 dark:text-white tracking-tight">Cấu hình hệ thống</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Quản lý dữ liệu danh mục Master Data và thiết lập hệ thống toàn diện.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-semibold rounded-lg text-sm transition-all">
+<span class="material-symbols-outlined text-sm">upload_file</span>
+                        Nhập dữ liệu (Import)
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg text-sm transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Thêm hãng xe mới
+                    </button>
+</div>
+</div>
+<!-- Tabs Navigation -->
+<div class="border-b border-slate-200 dark:border-slate-800 mb-6">
+<div class="flex gap-8">
+<button class="pb-4 border-b-2 border-primary text-primary font-bold text-sm">Danh mục xe</button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-slate-700 dark:hover:text-slate-200">Mã lỗi (OBD)</button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-slate-700 dark:hover:text-slate-200">Phí vận chuyển</button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-slate-700 dark:hover:text-slate-200">Cấu hình API</button>
+</div>
+</div>
+<!-- Content Area: Vehicle Brands Table -->
+<div class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-lg">Danh sách Hãng xe</h3>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span>Hiển thị 10 trong 45 hãng xe</span>
+</div>
+</div>
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider">
+<th class="px-6 py-4 font-bold">Logo</th>
+<th class="px-6 py-4 font-bold">Tên hãng xe</th>
+<th class="px-6 py-4 font-bold">Quốc gia</th>
+<th class="px-6 py-4 font-bold">Số lượng Dòng xe</th>
+<th class="px-6 py-4 font-bold">Trạng thái</th>
+<th class="px-6 py-4 font-bold text-right">Thao tác</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+</div>
+</td>
+<td class="px-6 py-4 font-semibold">Toyota</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Nhật Bản</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-bold">12 Dòng xe</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-emerald-500 text-xs font-bold">
+<span class="size-1.5 rounded-full bg-emerald-500"></span>
+                                    Hoạt động
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1 text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+</div>
+</td>
+<td class="px-6 py-4 font-semibold">Honda</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Nhật Bản</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-bold">8 Dòng xe</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-emerald-500 text-xs font-bold">
+<span class="size-1.5 rounded-full bg-emerald-500"></span>
+                                    Hoạt động
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1 text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+</div>
+</td>
+<td class="px-6 py-4 font-semibold">Hyundai</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Hàn Quốc</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-bold">15 Dòng xe</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-emerald-500 text-xs font-bold">
+<span class="size-1.5 rounded-full bg-emerald-500"></span>
+                                    Hoạt động
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1 text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+</div>
+</td>
+<td class="px-6 py-4 font-semibold">VinFast</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Việt Nam</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-bold">6 Dòng xe</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-emerald-500 text-xs font-bold">
+<span class="size-1.5 rounded-full bg-emerald-500"></span>
+                                    Hoạt động
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1 text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+</div>
+</td>
+<td class="px-6 py-4 font-semibold">BMW</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Đức</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-bold">20 Dòng xe</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-slate-400 text-xs font-bold">
+<span class="size-1.5 rounded-full bg-slate-400"></span>
+                                    Tạm ngưng
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1 text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="p-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2">
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-800 text-slate-400"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="size-8 flex items-center justify-center rounded bg-primary text-white text-sm font-bold">1</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-sm">2</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-sm">3</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-800 text-slate-400"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<!-- Dashboard Stats Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+<div class="p-6 bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl">
+<div class="flex items-center justify-between mb-4">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Hãng xe đang quản lý</span>
+<span class="material-symbols-outlined text-primary">directions_car</span>
+</div>
+<div class="text-3xl font-black">45</div>
+<div class="text-xs text-emerald-500 mt-2 font-bold">+3 tháng này</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl">
+<div class="flex items-center justify-between mb-4">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Tổng số Mã lỗi (OBD)</span>
+<span class="material-symbols-outlined text-primary">error</span>
+</div>
+<div class="text-3xl font-black">1,280</div>
+<div class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-bold">Dữ liệu tiêu chuẩn toàn cầu</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl">
+<div class="flex items-center justify-between mb-4">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Khu vực vận chuyển</span>
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+</div>
+<div class="text-3xl font-black">63</div>
+<div class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-bold">Toàn bộ tỉnh thành Việt Nam</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto px-8 py-6 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark text-slate-500 dark:text-slate-400 text-sm flex justify-between items-center">
+<p>© 2024 Admin Portal - Hệ thống quản lý Master Data xe</p>
+<div class="flex gap-4">
+<a class="hover:text-primary" href="#">Hướng dẫn sử dụng</a>
+<a class="hover:text-primary" href="#">Liên hệ hỗ trợ</a>
+</div>
+</footer>
+</main>
+</body></html>

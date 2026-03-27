@@ -1,0 +1,54 @@
+# Chi tiết Cấu hình hệ thống (Admin System Configuration)
+
+Dưới đây là phân tích chi tiết "nghiệp vụ ngầm" của Admin để vận hành một sàn linh kiện ô tô chuyên nghiệp.
+
+---
+
+### 1. Quản lý danh mục xe (Car Master Data)
+Đây là "xương sống" của hệ thống. Nếu danh mục này sai, khách sẽ mua nhầm phụ tùng.
+
+*   **Cấu trúc phân cấp (Hierarchy):**
+    *   **Level 1 - Hãng xe (Make):** Toyota, Honda, BMW, Mercedes...
+    *   **Level 2 - Dòng xe (Model):** Camry, Vios, Civic, CR-V...
+    *   **Level 3 - Thế hệ/Năm sản xuất (Generation/Year):** 2015-2020, 2021-Present.
+    *   **Level 4 - Phiên bản/Động cơ (Trim/Engine):** 2.0G, 2.5Q, Máy dầu, Máy xăng...
+*   **Mục đích sử dụng:**
+    *   **Bộ lọc (Filter):** Khách chọn "Toyota -> Camry -> 2019" để sàn chỉ hiện phụ tùng khớp với xe đó.
+    *   **Kiểm tra tương thích (Compatibility Check):** Khi khách xem một cái má phanh, hệ thống sẽ hiện: "Sản phẩm này tương thích với 5 dòng xe sau...".
+    *   **Quản lý mã OEM (Original Equipment Manufacturer):** Gắn mã định danh của nhà sản xuất vào từng dòng xe tương ứng.
+
+---
+
+### 2. Quản lý Mã lỗi (Diagnostic Error Codes - OBD-II)
+Đây là tính năng "thông minh" giúp sàn bán được nhiều hàng hơn bằng cách tư vấn đúng bệnh.
+
+*   **Dữ liệu quản lý:**
+    *   **Mã lỗi (Code):** Ví dụ P0101, P0300...
+    *   **Mô tả (Description):** "Lỗi cảm biến lưu lượng khí nạp (MAF Sensor Range/Performance)".
+    *   **Triệu chứng (Symptoms):** Xe tốn xăng, máy rung giật, khó nổ...
+    *   **Linh kiện gợi ý (Recommended Parts):** Cảm biến khí nạp, Lọc gió động cơ.
+*   **Luồng nghiệp vụ:**
+    *   Khách hàng nhập mã lỗi từ máy chẩn đoán vào thanh tìm kiếm.
+    *   Hệ thống trả về giải thích lỗi và **danh sách linh kiện liên quan** để khách mua thay thế ngay lập tức.
+
+---
+
+### 3. Phí vận chuyển (Logistics Configuration)
+Linh kiện ô tô rất đặc thù: Có cái rất nhỏ (cầu chì) nhưng có cái rất to/nặng (cánh cửa, động cơ).
+
+*   **Cấu hình Phí theo Ma trận:**
+    *   **Khoảng cách (Zone-based):** Nội thành, Liên tỉnh, Vùng sâu vùng xa.
+    *   **Trọng lượng (Weight-based):** Tính theo Gram/Kilogram.
+    *   **Kích thước cồng kềnh (Volumetric Weight):** (Dài x Rộng x Cao) / 6000. Cái nào nặng hơn thì tính phí theo cái đó.
+*   **Luồng xử lý:**
+    *   **Phí cố định:** Cho các kiện hàng nhỏ dưới 2kg.
+    *   **Phí linh hoạt:** Kết nối API với các đơn vị vận chuyển (GHTK, Viettel Post, Ahamove) để lấy giá real-time.
+    *   **Phí đặc thù:** Đối với hàng siêu trường, siêu trọng (ví dụ lốp xe tải), hệ thống cho phép Seller tự cấu hình phí vận chuyển riêng hoặc chọn "Thỏa thuận sau".
+*   **Quy tắc Free Ship:** Admin cấu hình mức đơn hàng tối thiểu (ví dụ: Đơn trên 5 triệu được miễn phí vận chuyển trong bán kính 20km).
+
+---
+
+### Tóm tắt giá trị mang lại:
+1.  **Master Data:** Giảm tỷ lệ đổi trả do mua nhầm hàng (Compatibility).
+2.  **Mã lỗi:** Tăng tỷ lệ chuyển đổi bằng cách giải quyết nỗi lo "không biết xe hỏng gì" của khách.
+3.  **Vận chuyển:** Đảm bảo sàn không bị lỗ phí ship đối với các linh kiện cồng kềnh (tản nhiệt, nắp capo).

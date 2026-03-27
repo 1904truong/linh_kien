@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Cổng Quản lý Tranh chấp - Admin Portal</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 flex flex-col bg-white dark:bg-background-dark">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<div>
+<h1 class="text-sm font-bold tracking-tight">Admin Portal</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Hệ thống khiếu nại</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+<div class="text-[11px] font-semibold text-slate-400 uppercase px-3 py-2">Menu chính</div>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Tổng quan
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium bg-primary/10 text-primary rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">list_alt</span>
+                    Danh sách tranh chấp
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                    Báo cáo
+                </a>
+<div class="pt-4 text-[11px] font-semibold text-slate-400 uppercase px-3 py-2">Hệ thống</div>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+                    Lịch sử hệ thống
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Cấu hình
+                </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2">
+<div class="size-9 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Ảnh đại diện quản trị viên" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW_ofiOAAqELjdBkH6pocPohhzUomv7k82EUJ7sCgYCCRMhl0_7zNA_9fyGw_cCoW_82nDfwvAsUi0VwRoT6vumCg-PRq4e-OCBElfeUcPhAROojX8OcAFRb4GX_rHLxBBya7yO3Ma8-5MCdrXQ0MBJ4gnHUv9dSN_8V7zGXYlwTFJwIFzSyPXmRbvLfp6KWa-40xjgcf6wX16H0gJuudXrte0_GXppOYXtgZuO-9ciywh2vUtj8-JavioPjgoOiM7gd8YzQZ9LmQ"/>
+</div>
+<div class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+<p class="text-xs font-bold uppercase">Quản trị viên</p>
+<p class="text-[10px] text-slate-500">admin@complaint.vn</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer text-sm">logout</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0">
+<!-- Top Header -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-6 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/50" placeholder="Tìm mã tranh chấp, khách hàng..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="size-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-6 w-px bg-slate-200 dark:border-slate-800"></div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-lg">
+<span class="text-xs font-semibold">Trạng thái:</span>
+<span class="flex items-center gap-1.5 text-emerald-500 text-xs font-medium">
+<span class="size-2 bg-emerald-500 rounded-full"></span> Trực tuyến
+                        </span>
+</div>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<!-- Cases List (Left Column) -->
+<div class="w-80 border-r border-slate-200 dark:border-slate-800 flex flex-col bg-slate-50 dark:bg-background-dark">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h2 class="text-xs font-bold uppercase text-slate-500">Vụ việc mới (12)</h2>
+<span class="material-symbols-outlined text-slate-400 text-lg">filter_list</span>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Case Item Active -->
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-primary/5 border-l-4 border-l-primary cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[11px] font-bold text-primary">#TC-9921</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-500">Khẩn cấp</span>
+</div>
+<h3 class="text-sm font-semibold mb-2 line-clamp-1">Lỗi sản phẩm hư hỏng khi nhận</h3>
+<div class="flex items-center justify-between">
+<span class="text-[10px] text-slate-500">2 giờ trước</span>
+<span class="text-[10px] font-medium px-2 py-0.5 bg-amber-500/10 text-amber-500 rounded-full">Đang xử lý</span>
+</div>
+</div>
+<!-- Case Item -->
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[11px] font-bold text-slate-500">#TC-9920</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-500/10 text-slate-500">Thấp</span>
+</div>
+<h3 class="text-sm font-semibold mb-2 line-clamp-1">Không nhận được hàng dù đã báo giao</h3>
+<div class="flex items-center justify-between">
+<span class="text-[10px] text-slate-500">5 giờ trước</span>
+<span class="text-[10px] font-medium px-2 py-0.5 bg-blue-500/10 text-blue-500 rounded-full">Chờ phản hồi</span>
+</div>
+</div>
+<!-- Case Item -->
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[11px] font-bold text-slate-500">#TC-9918</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-500">Trung bình</span>
+</div>
+<h3 class="text-sm font-semibold mb-2 line-clamp-1">Hàng không đúng mô tả trên web</h3>
+<div class="flex items-center justify-between">
+<span class="text-[10px] text-slate-500">Hôm qua</span>
+<span class="text-[10px] font-medium px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-full">Đã nhận bằng chứng</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat & Evidence (Middle Column) -->
+<div class="flex-1 flex flex-col bg-white dark:bg-slate-900/40 relative">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<div>
+<h2 class="text-lg font-bold">Chi tiết tranh chấp #TC-9921</h2>
+<p class="text-xs text-slate-500">Bắt đầu bởi: <span class="font-medium text-slate-700 dark:text-slate-300">Nguyễn Văn A (Khách hàng)</span></p>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">assignment_return</span> Hoàn tiền khách
+                            </button>
+<button class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">payments</span> Giải ngân Shop
+                            </button>
+<button class="bg-rose-600/10 text-rose-500 border border-rose-600/20 hover:bg-rose-600/20 text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">priority_high</span> Chuyển tiếp cấp cao
+                            </button>
+</div>
+</div>
+<!-- Chat Area -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<!-- Message (Customer) -->
+<div class="flex gap-3 max-w-2xl">
+<div class="size-8 rounded-full bg-blue-500 flex items-center justify-center text-white shrink-0 text-xs font-bold">K</div>
+<div class="space-y-1">
+<div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl rounded-tl-none">
+<p class="text-sm">Tôi nhận được kiện hàng sáng nay nhưng màn hình tivi bị vỡ nát hoàn toàn. Tôi yêu cầu hoàn tiền ngay lập tức vì đây là lỗi do vận chuyển hoặc đóng gói của shop.</p>
+</div>
+<div class="flex gap-2 p-1">
+<div class="size-20 bg-slate-200 dark:bg-slate-700 rounded-lg overflow-hidden border border-slate-300 dark:border-slate-600">
+<img class="w-full h-full object-cover" data-alt="Hình ảnh bằng chứng tivi bị vỡ" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLkNtSxmF0CWoFs0xZmbdr2hLRHELtYjMG7egBZk4KWorvVAO9LWtTErClu-coUr0MskLAZ8Werrf5IqgEl4Vux2Zth3qBc8ukhl0vNDAtbD9GZwxqksc6oITCvPDRHA9GBy4-mDwqSPVz_e9zEGWmaQWY3awMYRbp3Jz48haoc8jFGyjpiTVDePFpTjZ1JdJb11rj1DTEIWEqbdcgqd7ZFUt91pZm1rtHQ3qxHUBrBrvhsvUG82Fqzml3E6USC_-PkXa9Daqz-Ag"/>
+</div>
+<div class="size-20 bg-slate-200 dark:bg-slate-700 rounded-lg overflow-hidden border border-slate-300 dark:border-slate-600">
+<img class="w-full h-full object-cover" data-alt="Hình ảnh bằng chứng hộp móp méo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSnhxwbzj0_CrVWEj1XtCu-ufKa1_4TN3LZU87bo410aPoaF-_PvhFt5Yhlp8BU_4d-aYCxVDw3Og1p5ht2Sy3j3VHnxk4jOCALBn2OuGuIIv5KkIpVzWi1kMZ3KGM7TlUDObVBntLGqCuKUyOiVsWSzvlbljIShUWF3csdSg3ryTW1nSYXMyR9gKjXn6z29RUsUO5UuS3vpXyHhW4GBEV2QFeJCcXBAMQeX3OebFgosnuMC3GjGochLOe_yJL1l_-rTBbaeuGEFg"/>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 ml-1">10:30 AM</span>
+</div>
+</div>
+<!-- Message (Shop) -->
+<div class="flex gap-3 max-w-2xl ml-auto flex-row-reverse">
+<div class="size-8 rounded-full bg-emerald-500 flex items-center justify-center text-white shrink-0 text-xs font-bold">S</div>
+<div class="space-y-1 text-right">
+<div class="bg-primary/20 text-slate-900 dark:text-slate-100 p-3 rounded-xl rounded-tr-none">
+<p class="text-sm">Chào quý khách, chúng tôi đã kiểm tra camera đóng gói, sản phẩm hoàn toàn nguyên vẹn khi giao cho đơn vị vận chuyển. Có thể lỗi do phía giao hàng.</p>
+</div>
+<div class="flex gap-2 p-1 justify-end">
+<div class="size-20 bg-slate-200 dark:bg-slate-700 rounded-lg overflow-hidden border border-slate-300 dark:border-slate-600">
+<img class="w-full h-full object-cover" data-alt="Hình ảnh video đóng gói sản phẩm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfdNVjpXWTT3wpBD9nwcOSuD8H-xXzF_VwvFnXXU0mLU56kymEwAjn5S_tXlLMuCUynZTaZZKhXSfCDOzmaC-Yp0xcd1uzio8xzHPOJQUCpEQwf9QcuIVU_5kZ0aVf8k5q4cB9fDpDJsIQsM8fQN0guNf66rIL8MVQQhbJ-QOeLfyBN8LXKHGkuEHQfxe8bJWvq5eJSAb8ufuB-sV5jeNw-GZsw3CLA_zg5r0OF9azDCeGEr5Y6zj5s_C5gY2p5z4ScVqQXNI46Z0"/>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 mr-1">11:15 AM</span>
+</div>
+</div>
+<!-- Admin Note (Internal) -->
+<div class="flex justify-center">
+<div class="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-400 px-4 py-2 rounded-lg border border-amber-200 dark:border-amber-900/50 text-[11px] font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">lock</span> Ghi chú nội bộ: Đã yêu cầu đơn vị vận chuyển GHN cung cấp biên bản bàn giao.
+                            </div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
+<div class="relative">
+<textarea class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 pr-24 text-sm focus:ring-1 focus:ring-primary min-h-[100px]" placeholder="Nhập phản hồi hoặc ghi chú nội bộ..."></textarea>
+<div class="absolute right-3 bottom-3 flex gap-2">
+<button class="p-2 text-slate-400 hover:text-primary"><span class="material-symbols-outlined">attach_file</span></button>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Transaction Details (Right Column) -->
+<div class="w-72 border-l border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-background-dark overflow-y-auto">
+<div class="p-5 space-y-6">
+<!-- Transaction Info -->
+<section>
+<h3 class="text-[11px] font-bold uppercase text-slate-500 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span> Thông tin giao dịch
+                            </h3>
+<div class="space-y-3">
+<div class="p-3 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700">
+<p class="text-[10px] text-slate-500 uppercase font-bold">Mã đơn hàng</p>
+<p class="text-sm font-semibold text-primary">ORD-229103</p>
+</div>
+<div class="p-3 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700">
+<p class="text-[10px] text-slate-500 uppercase font-bold">Giá trị</p>
+<p class="text-sm font-bold">15,490,000 ₫</p>
+</div>
+<div class="p-3 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700">
+<p class="text-[10px] text-slate-500 uppercase font-bold">Cửa hàng</p>
+<p class="text-sm font-semibold">Điện máy Xanh (Official)</p>
+</div>
+</div>
+</section>
+<!-- Timeline History -->
+<section>
+<h3 class="text-[11px] font-bold uppercase text-slate-500 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">history</span> Lịch sử vụ việc
+                            </h3>
+<div class="relative pl-4 space-y-6 before:absolute before:left-0 before:top-1 before:bottom-1 before:w-px before:bg-slate-200 dark:before:bg-slate-800">
+<div class="relative">
+<span class="absolute -left-[20px] top-1 size-2.5 bg-primary rounded-full ring-4 ring-background-light dark:ring-background-dark"></span>
+<p class="text-[11px] font-bold">Admin tiếp nhận</p>
+<p class="text-[10px] text-slate-500">12/10/2023 - 10:45</p>
+</div>
+<div class="relative">
+<span class="absolute -left-[20px] top-1 size-2.5 bg-slate-300 dark:bg-slate-700 rounded-full ring-4 ring-background-light dark:ring-background-dark"></span>
+<p class="text-[11px] font-bold">Shop phản hồi</p>
+<p class="text-[10px] text-slate-500">12/10/2023 - 11:15</p>
+</div>
+<div class="relative">
+<span class="absolute -left-[20px] top-1 size-2.5 bg-slate-300 dark:bg-slate-700 rounded-full ring-4 ring-background-light dark:ring-background-dark"></span>
+<p class="text-[11px] font-bold">Khách gửi khiếu nại</p>
+<p class="text-[10px] text-slate-500">12/10/2023 - 10:30</p>
+</div>
+</div>
+</section>
+<!-- Shipping Info -->
+<section>
+<h3 class="text-[11px] font-bold uppercase text-slate-500 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">local_shipping</span> Vận chuyển
+                            </h3>
+<div class="p-3 bg-slate-200/50 dark:bg-slate-800/50 rounded-lg text-xs space-y-2">
+<p class="flex justify-between"><span>Đơn vị:</span> <span class="font-bold">GHN Express</span></p>
+<p class="flex justify-between"><span>Mã vận đơn:</span> <span class="font-bold text-primary underline">GHN772101</span></p>
+<p class="flex justify-between"><span>Trạng thái:</span> <span class="text-emerald-500 font-medium">Đã giao thành công</span></p>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

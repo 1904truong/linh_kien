@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Hồ sơ &amp; Gara của tôi</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex flex-col w-full group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between border-b border-solid border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-40 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Hồ sơ &amp; Gara</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 gap-8">
+<!-- Profile Section -->
+<section class="flex flex-col gap-6 bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col @container">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-6 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24 border-4 border-primary/20" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMdsLRfa_LCFfPiOhHb5IsUnjbYn-yXUKHua-t3J7pMTURDOpdbSkvZwzPRu1EumxRGLJOryP5awyFFdtC-uKqwUsfIw8H__iHAnQKXNeqlAMYbExoRoT6djOcT9NaR0AUuQd_E2f0INaIwNOgGFZtD5C7McdSFxthUSqM0IxaNWluRC2WVIrja-gEmBI9QIkT4c1Gi9XudRL52UG8NbLV8A8RpATkWAJCu-MPhztGVQtZWmIStPTuqe96xFBrWgLsAvxV3xNnTA8");'></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight">Nguyễn Văn An</p>
+<span class="px-2 py-0.5 bg-primary/20 text-primary text-xs font-bold rounded uppercase">Thành viên Vàng</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base">nguyenvana@email.com • TP. Hồ Chí Minh</p>
+<div class="flex gap-4 mt-2">
+<div class="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                                                Tham gia: 12/2022
+                                            </div>
+</div>
+</div>
+</div>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold transition-colors hover:bg-primary/90">
+<span class="material-symbols-outlined mr-2 text-sm">edit</span>
+                                    Chỉnh sửa hồ sơ
+                                </button>
+</div>
+</div>
+</section>
+<!-- Garage Section -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">garage</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Gara của tôi (2)</h2>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-lg h-9 px-4 bg-primary/10 text-primary text-sm font-bold border border-primary/20 hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                                Thêm xe mới
+                            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Vehicle Card 1 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="White modern luxury sedan in garage" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDotv9_sb548bEYwSFn7eLHJ7_k6uInuy3DMZvsip_nN_A6gTDA22UNRVY9uY6BtFDZVnYOH6NJqBvj6TPaHljUR15sN-NdpA16eQP_xV5hSLPeyBrDvtJQuT37s5iVlOVoqNjP6q5wPycRbCWGCZ6QVuVLFG9MbXiFBPp0sjwgrFN7mXVvd0h1i0nuOUI2Z7kLMDk2mQItIol4MYGwzSRWld-6lsUs26-3bWKF-7CXAi6E_XIxGGF52D5HLxHAXIriVYG5F4yfBIQ");'></div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">Toyota Camry</p>
+<span class="bg-emerald-500/10 text-emerald-500 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20 uppercase tracking-wider">Đang sử dụng</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Phiên bản: 2.5Q • Đời 2022</p>
+<div class="mt-2 py-2 px-3 bg-slate-100 dark:bg-slate-800 rounded flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400 font-medium uppercase tracking-tighter">Số VIN</span>
+<span class="text-slate-900 dark:text-slate-200 font-mono font-bold">1234567890ABCDEF</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 rounded-lg h-9 bg-primary/10 text-primary text-xs font-bold transition-all hover:bg-primary/20">Chi tiết xe</button>
+<button class="rounded-lg h-9 w-9 bg-slate-100 dark:bg-slate-800 text-slate-500 flex items-center justify-center hover:text-red-500">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+<!-- Vehicle Card 2 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Blue SUV car interior dashboard view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQxbNJkW8ybvkZ2kvv_CcWFsdwTZf4OveuvhWL4-P3GqvkkGw-VUjZLQky4ysUvFQAal_9espn9y1PkhSsI3rku3X0V2m4KNrAoGPMOjqNxBzUJmCOnHjydoQ_4jyCxiKvhmj7aS6amurq-sQkq6dwG2IjNcHlzQN58NF76jKgAsN2AoxPbky9XY8h2AgqtJbynIEsFMjk2GOYlM8bLR40kA33POQlRBTGwMxcEnIo9Qp7RSah8-sgpDc3GmKNDsDDaGiAaakwoXI");'></div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">Ford Everest</p>
+<span class="bg-slate-500/10 text-slate-500 text-[10px] font-bold px-2 py-0.5 rounded border border-slate-500/20 uppercase tracking-wider">Lưu kho</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Phiên bản: Titanium+ • Đời 2021</p>
+<div class="mt-2 py-2 px-3 bg-slate-100 dark:bg-slate-800 rounded flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400 font-medium uppercase tracking-tighter">Số VIN</span>
+<span class="text-slate-900 dark:text-slate-200 font-mono font-bold">FE987654321XYZ12</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 rounded-lg h-9 bg-primary/10 text-primary text-xs font-bold transition-all hover:bg-primary/20">Chi tiết xe</button>
+<button class="rounded-lg h-9 w-9 bg-slate-100 dark:bg-slate-800 text-slate-500 flex items-center justify-center hover:text-red-500">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommended Products -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col gap-1 px-1">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                                Sản phẩm gợi ý cho xe của bạn
+                            </h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Dựa trên thông tin Toyota Camry 2022 trong gara của bạn</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden mb-3 border border-transparent group-hover:border-primary transition-all">
+<div class="w-full h-full bg-center bg-cover transition-transform group-hover:scale-105" data-alt="Car oil filter spare part" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAbkb6M5aArvSmP4fiiDIwu-s4FKvULgKPhB5OZZsWm8517hYTn5_SkW61UxUtQB1ur3rF3bX0mZ_kTqaspOqDvXqMRHNUOdAF3jFM00i_ZpuvfPx9H4mGbvi714yTSgrVGzP9tEQtgHlndtgD9Z0TOkFQEog4AXpFHysDyoomVDhnveU4wfRMyMCiJXNeSBtuItaZAgdQSIfu0rw6uzTf9GqvaWd6ZzLi2WrCI6UihOSSxjR2UnEUBS6T6HGCeW6cGymZxkrfWcY");'></div>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold line-clamp-2">Lọc dầu Toyota chính hãng (Camry 2022)</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary font-bold text-sm">250.000đ</p>
+<p class="text-slate-400 line-through text-[10px]">320.000đ</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden mb-3 border border-transparent group-hover:border-primary transition-all">
+<div class="w-full h-full bg-center bg-cover transition-transform group-hover:scale-105" data-alt="Car rubber floor mats set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIE3eE4Ec7ZtQpjoUnkzCWCYOu8bVo62sxg80CD_syrgCv_RmQ025qtYhXECRN0dQGjvxQ3DJ6THHa6sdWhpt_A7WdFtNyzLbiEtBac-yLl0oeJWIzZJWBR2dX1YUYj1IB-80Ojm5QfdKx9SN2Vb8ghnbS6u02ov224RlOu7xjRNdNOU7QbUE4QR7BTNKI4dcQqroMhWzwR0YvI7tMcUmvJjSAXjijp8eDT1KOb5ihD7PSPiwiklN3GQAIa3XMVt1P-QqU0_IvsF8");'></div>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold line-clamp-2">Thảm lót sàn 5D cao cấp cho Camry</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary font-bold text-sm">1.850.000đ</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden mb-3 border border-transparent group-hover:border-primary transition-all">
+<div class="w-full h-full bg-center bg-cover transition-transform group-hover:scale-105" data-alt="Car headlight bulbs spare parts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZpVuEZybeWbrkcU7f8Zoza7B9ETgZS5w3hgUPL5pyyzVj3BYpKS6o6sXrdkcSBFcGhER6JNqsE07oZK3wt_AalUk85_t221dzH-UetxFWWnjxfmzQ-HDeRQbRLpezhIwNqxFM8lRyZZ2uYg90rp4xvVVuSjGHch1J02ECrpC1qJylQj1joNyOGoxWcha2ktwo4S9TDceXkQA6WytXLjXw463h2j-nHqRXKUXWDA0oQuo8vN4zXVEf860t9jijm9Ijg992PyZQ7ck");'></div>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold line-clamp-2">Bóng đèn LED Philips Ultinon Essential</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary font-bold text-sm">1.200.000đ</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden mb-3 border border-transparent group-hover:border-primary transition-all">
+<div class="w-full h-full bg-center bg-cover transition-transform group-hover:scale-105" data-alt="Car cleaning wax supplies" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4xcsD3RaleRgNC1IE_n4GXuSxsh2P-Z77tlk-N2JzOgXmsfognGyaP5FEAake4ydRwkFXM0EBE61ZrRlm5XOBhpW3v9lENfSrv9SNPlXMoTbibrHffCqhejjmvICHHDGps1A6tmAmof90q-3b5WZx6oGwSA-MIwBdwWCfYjfbLxuyZ2pCqH6noOEth5RjBQlruleP6wQP85rnINGnVoiYiJRwMm4vjDgto3E2a0dCYtTdzXbcIcp5szVd2QGU7mGDXPGWmjA6DyE");'></div>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold line-clamp-2">Bộ chăm sóc nội thất da 3M</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary font-bold text-sm">450.000đ</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Nav (Mobile Only) -->
+<div class="lg:hidden sticky bottom-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-2 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Trang chủ</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">garage</span>
+<span class="text-[10px] font-bold">Gara</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-medium">Cửa hàng</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Hồ sơ</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

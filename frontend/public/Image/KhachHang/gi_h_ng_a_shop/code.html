@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-[1200px] mx-auto px-4 py-8">
+<!-- Header Section -->
+<header class="flex items-center justify-between mb-8 border-b border-slate-200 dark:border-slate-800 pb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
+<h1 class="text-2xl font-bold tracking-tight">Giỏ hàng của bạn</h1>
+</div>
+<div class="text-sm text-slate-500 dark:text-slate-400">
+                Bạn có <span class="text-primary font-bold">4</span> sản phẩm trong giỏ
+            </div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Cart Items Grouped by Shop -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Shop Group 1 -->
+<div class="bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
+<div class="flex items-center gap-2">
+<input class="rounded border-slate-300 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="material-symbols-outlined text-primary">store</span>
+<h2 class="font-bold text-lg">Hanoi Fashion Hub</h2>
+</div>
+<button class="text-sm text-primary hover:underline">Xem shop</button>
+</div>
+<!-- Product Item 1 -->
+<div class="p-4 flex flex-col sm:flex-row gap-4 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="w-24 h-24 rounded-lg bg-slate-200 dark:bg-slate-800 bg-cover bg-center shrink-0" data-alt="Áo sơ mi nam cao cấp màu trắng" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACGPqeddBxdrWEfUuA51aUajC_sZRVN16syZqy1NZ02Td04oYEwC_EFDoeHYfZtOlxiXUIyIbNH06Eg6RtpV-tBlnk4MB2-PsCS7ySuGFzC-JnZ2hweI978IYKdf2pp-KoQoaihEltzo0u8pF-dCqES8I4ShEWHr4YcMm2-sOvaFCPHulFdRDI4RoBMl2vIvXELvtBZfalKKq6evJMx9Cj53iNE5beMIpggF74AFt_1ddViEGuLiZaBF05gQwhxVpWiqxBbG48YSY')"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-medium text-lg leading-tight">Áo Sơ Mi Oxford Premium</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Màu: Trắng, Size: XL</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="text-primary font-bold text-lg">550.000₫</div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-medium">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end justify-between">
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="p-4 flex flex-col sm:flex-row gap-4">
+<div class="flex items-center gap-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="w-24 h-24 rounded-lg bg-slate-200 dark:bg-slate-800 bg-cover bg-center shrink-0" data-alt="Giày thể thao đỏ phong cách" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2dCIAryuUK3wtZY77fuMCizSP4dRw80eEcblaudJ6AM4zd59I3Rn0eeZO4xMWvX7jaX1x7A2PXE_uyatyTpnETmUr_1dLcReT2BXFQNNRBVEzKZrZ-JRupz6T2P4cq7yT25T3FzAkfOvAvPdoCn28KiRvFRBKEBbZxCta-gj495OG117hr2Q32LQsj4OnBC3CgXFSfvq8Mlv6V8UUeMLHaMucP_bXWd22Zcdq_9M-ODoqFAaNitK6864THVoZEAk96dORDYQ6CGw')"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-medium text-lg leading-tight">Giày Sneaker Sport Pro</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Màu: Đỏ, Size: 42</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="text-primary font-bold text-lg">1.200.000₫</div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-medium">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end justify-between">
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Shop Subtotal -->
+<div class="p-4 bg-primary/5 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<span class="text-sm text-slate-500 dark:text-slate-400">Tạm tính cho shop:</span>
+<span class="font-bold text-primary">1.750.000₫</span>
+</div>
+</div>
+<!-- Shop Group 2 -->
+<div class="bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
+<div class="flex items-center gap-2">
+<input class="rounded border-slate-300 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="material-symbols-outlined text-primary">store</span>
+<h2 class="font-bold text-lg">Phụ kiện Đồ Chơi Tech</h2>
+</div>
+<button class="text-sm text-primary hover:underline">Xem shop</button>
+</div>
+<!-- Product Item 3 -->
+<div class="p-4 flex flex-col sm:flex-row gap-4">
+<div class="flex items-center gap-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<div class="w-24 h-24 rounded-lg bg-slate-200 dark:bg-slate-800 bg-cover bg-center shrink-0" data-alt="Tai nghe bluetooth không dây màu đen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUGs65lcdKOHx9KEJyUbJZ73gQLYLRVTRs8Hg8MM2FQ8VMXYMencMoI4_E8ygp5lKSLCMLqSVp02epBh-7Uz213nPcqW0k_it5JZUaA28HU0uptbO-ME0u3uUmqOJavpBY7v-V1me0eKGwMrKPKGC61HI1JOFXQ_H3YS2e8hoS8ThLTMvPnN3dxLSdH0oUtQ-FJU-B59jeUn208vrUk73Po2BHSnWJFfVraT_kv5F4feh7WxdZ92B9NxDgE-P-Zl5gJDGumZ3hV5w')"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-medium text-lg leading-tight">Tai Nghe Wireless Bass Boost</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Loại: Bluetooth 5.0</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="text-primary font-bold text-lg">890.000₫</div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-medium">2</span>
+<button class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end justify-between">
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Shop Subtotal -->
+<div class="p-4 bg-primary/5 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<span class="text-sm text-slate-500 dark:text-slate-400">Tạm tính cho shop:</span>
+<span class="font-bold text-primary">1.780.000₫</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="space-y-6">
+<!-- Promo Code -->
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">sell</span>
+                        Mã giảm giá
+                    </h3>
+<div class="flex gap-2">
+<input class="flex-1 bg-transparent border-slate-300 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary text-sm" placeholder="Nhập mã giảm giá..." type="text"/>
+<button class="bg-primary/10 text-primary px-4 py-2 rounded-lg font-bold text-sm hover:bg-primary/20 transition-colors">Áp dụng</button>
+</div>
+</div>
+<!-- Total Summary -->
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-lg sticky top-8">
+<h3 class="font-bold text-lg mb-4">Chi tiết thanh toán</h3>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between text-slate-500 dark:text-slate-400">
+<span>Tạm tính (4 sản phẩm)</span>
+<span>3.530.000₫</span>
+</div>
+<div class="flex justify-between text-slate-500 dark:text-slate-400">
+<span>Phí vận chuyển</span>
+<span>45.000₫</span>
+</div>
+<div class="flex justify-between text-green-500">
+<span>Giảm giá</span>
+<span>-100.000₫</span>
+</div>
+<div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<span class="font-bold text-lg">Tổng cộng</span>
+<div class="text-right">
+<span class="block font-bold text-2xl text-primary">3.475.000₫</span>
+<span class="text-xs text-slate-400">(Đã bao gồm VAT)</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-bold text-lg shadow-md shadow-primary/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+                        TIẾN HÀNH THANH TOÁN
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="mt-6 flex flex-col gap-3">
+<p class="text-[11px] text-slate-400 text-center">Chúng tôi chấp nhận nhiều phương thức thanh toán an toàn</p>
+<div class="flex justify-center gap-4 opacity-50 grayscale hover:grayscale-0 transition-all">
+<div class="w-10 h-6 bg-slate-300 rounded"></div>
+<div class="w-10 h-6 bg-slate-300 rounded"></div>
+<div class="w-10 h-6 bg-slate-300 rounded"></div>
+<div class="w-10 h-6 bg-slate-300 rounded"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Recommendation (Optional) -->
+<div class="mt-16 pb-12">
+<h3 class="text-xl font-bold mb-6">Có thể bạn quan tâm</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg bg-slate-200 dark:bg-slate-800 mb-3 bg-cover bg-center" data-alt="Đồng hồ thông minh hiện đại" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0OBB2QbBBhPcOBA6ePwpeswSDzxSaM372SY5I_ata1I8xoPfFboi6dipPFDQmDy4po2Ncw_edqJw_qvBg9HgwssWAmHzY4bWw-f7i_5CvN5GFZwJ6I6XjqFdDuK-FFTql_mSuxIKOjkWrNBy0IJW3ML1Smxvm5qtcKTgNGKTP6xamggDMQzqMHMbb6n-fU-h3aLtN_nnIcYw6NwkDoC7bsWIP8YLPCCreeriwYAWnkyu_AAEMSHaI9PJFgg1K0wYPMD6VVLBlxdQ')"></div>
+<h4 class="font-medium text-sm group-hover:text-primary transition-colors">Smart Watch Series 7</h4>
+<p class="text-primary font-bold">2.450.000₫</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg bg-slate-200 dark:bg-slate-800 mb-3 bg-cover bg-center" data-alt="Túi xách da thời trang nữ" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3BJ9ZBfRD7tV_DUDfz9GjH2l_bP2WBR9N5J2d_bQiInAqcLI7vCJIGbbgbL0N-7-3UoCCMVOI4Q0sEnxTh4i6xjb2N6ZkzwQa6onKscyJVm19KpmWD_6Yr5IHs8jCilq2eZ2jtc56BrHpV3see7UdWcNmUTBW17X8hDqHdrh2dfBBL3eFGzmYFleTpdDbbyBUXykPacQ9sbaV8s3CXyMVkmIK0_vjOeariPA9iDzVjZtqss2r77x4G2_S55ePFVA6PV0lKE66woY')"></div>
+<h4 class="font-medium text-sm group-hover:text-primary transition-colors">Túi xách Da Ý</h4>
+<p class="text-primary font-bold">1.890.000₫</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg bg-slate-200 dark:bg-slate-800 mb-3 bg-cover bg-center" data-alt="Kính mát thời trang cao cấp" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBguYrmZROuNBn-T8Q4p4gjG5lX2WKaWbNMBFMgJNR4-z1e75jrVs3QEmxQ87dSKQqr_yR6eOTE6HsJSL2rk2ybPXTharLz1D6pBxRk3QImFZjfkH1mnLMmVIxQTZjfR_FZgl06II72LcBCG1bVnon8UDtlmN0lr_zT5V5rFvse9soaXXOhNWSP_tMvcZE7lsh101NRrLYQWGtraBrOjzILy6I6iJ64CeAAF7rZ-nh3Dbf4yZF4thzWhH46z2wpR-oKCfW0rR586N0')"></div>
+<h4 class="font-medium text-sm group-hover:text-primary transition-colors">Kính Mát Aviator Luxe</h4>
+<p class="text-primary font-bold">950.000₫</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square rounded-lg bg-slate-200 dark:bg-slate-800 mb-3 bg-cover bg-center" data-alt="Giày chạy bộ chuyên nghiệp" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAq_wVxQTKft9jvnW1c1_SYXTbEnIDpWy501QS3cNICGjoEAbvIY_y__Zs7U5SSkzQ9CySJ0uOAaRNI4hWXj1PbRXBWtKczkX7dbpZmEPwBBusb8nThEYbGcPQ794MNDNOFrBkVTdCNAW0oA6ol9ayzr90hW-rYMeQ_9PZ8MbjZ7pjIpXbdwiAz1Rc7uQRYbcpR6mBmutBqiW1FUXcRdaOE65j-Or-9yzt-_iMtcO7-UTMmcu_HQXoUmFPFxRgdl9VhWnB-j8uVwpU')"></div>
+<h4 class="font-medium text-sm group-hover:text-primary transition-colors">Giày Chạy Bộ AirMax</h4>
+<p class="text-primary font-bold">3.200.000₫</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

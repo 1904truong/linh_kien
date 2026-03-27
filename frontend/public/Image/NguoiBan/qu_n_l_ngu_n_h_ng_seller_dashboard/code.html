@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Bảng điều khiển Nhà bán hàng - Quản lý Nguồn hàng</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 flex-shrink-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex flex-col justify-between py-6">
+<div class="flex flex-col gap-6 px-4">
+<div class="flex items-center gap-3 px-2">
+<div class="h-10 w-10 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div>
+<h1 class="text-sm font-bold uppercase tracking-wider">AutoPart Pro</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Bảng điều khiển</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-sm font-medium">Tổng quan</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-fill-1">inventory_2</span>
+<span class="text-sm font-medium">Nguồn hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-sm font-medium">Sản phẩm</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-sm font-medium">Đơn hàng</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">warehouse</span>
+<span class="text-sm font-medium">Kho hàng</span>
+</a>
+<div class="my-2 border-t border-slate-200 dark:border-slate-800"></div>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Cài đặt</span>
+</a>
+</nav>
+</div>
+<div class="px-4">
+<div class="bg-primary/5 rounded-xl p-4 mb-4 border border-primary/20">
+<p class="text-xs font-semibold text-primary mb-1 uppercase">Gói Premium</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Tăng giới hạn nhập hàng và hỗ trợ ưu tiên.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 px-4 rounded-lg transition-all">
+                        Nâng cấp ngay
+                    </button>
+</div>
+<div class="flex items-center gap-3 px-2">
+<div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden border border-slate-300 dark:border-slate-700" data-alt="Avatar của quản trị viên" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKDThXqPn7E8euT9Ie8VZRlAUE3ApJxb_PTLvHOEkYyWSgbq-BYWZwE7p09Jh57OBmHNNW7Qiq0PhWol7uwmvuaFDXopIY2u_hPOyYMWdKIWOabrZTus2agj3pKMD5OjC_TP5RR_iXrI4jqJ6FsTfy7mSgk36t-q8FSgLAv7GPGugXAZdLdJOqeBkv1TqRHUOlGen16GR-R16y2_TxzpeZaufsuWfbLBQTClGz9E9oPQVOT0i6XdIGd0_Fh8Ni2FBhzszAZTFnEh0");'></div>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-bold truncate">Trần Hoàng Nam</p>
+<p class="text-xs text-slate-500 truncate text-ellipsis">Admin Store #12</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto bg-slate-50 dark:bg-background-dark p-8">
+<div class="max-w-6xl mx-auto flex flex-col gap-8">
+<!-- Header & Search -->
+<div class="flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-1">
+<h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-slate-50">Quản lý Nguồn hàng</h2>
+<p class="text-slate-500 dark:text-slate-400">Tìm kiếm và kết nối trực tiếp với các tổng kho phụ tùng chính hãng.</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-lg">history</span>
+                                Lịch sử nhập
+                            </button>
+</div>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-slate-900 dark:text-slate-100 shadow-sm transition-all" placeholder="Tìm tên nhà cung cấp, mã OEM hoặc tên phụ tùng ô tô..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-2">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium shadow-lg shadow-primary/20">
+                            Tất cả hạng mục
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-lg">earth_engine</span>
+                            Động cơ
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-lg">minor_crash</span>
+                            Hệ thống phanh
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-lg">settings_input_component</span>
+                            Giảm xóc
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-lg">lightbulb</span>
+                            Hệ thống đèn
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                            Lọc nâng cao
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Results List -->
+<div class="lg:col-span-2 flex flex-col gap-4">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-bold">Nhà cung cấp đề xuất</h3>
+<span class="text-sm text-slate-500">Tìm thấy 42 kết quả</span>
+</div>
+<!-- Provider Card 1 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:shadow-md transition-shadow">
+<div class="flex gap-5">
+<div class="w-24 h-24 rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0 flex items-center justify-center border border-slate-200 dark:border-slate-600 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center text-white font-black text-2xl" data-alt="Logo nhà cung cấp phụ tùng 1">VXP</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-lg">VietXpress Parts - Tổng kho miền Bắc</h4>
+<span class="px-2 py-0.5 bg-green-500/10 text-green-500 text-xs font-bold rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Đối tác Vàng
+                                        </span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-1">Chuyên phụ tùng BMW, Mercedes-Benz, Audi chính hãng. Kho sẵn 50.000+ mã hàng.</p>
+<div class="flex items-center gap-4 mb-4 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Hà Nội, VN</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">star</span> 4.9 (1.2k đánh giá)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_shipping</span> 24h</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white py-2 px-4 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors">Kết nối ngay</button>
+<button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 py-2 px-4 rounded-lg text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">Import sản phẩm</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 2 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:shadow-md transition-shadow">
+<div class="flex gap-5">
+<div class="w-24 h-24 rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0 flex items-center justify-center border border-slate-200 dark:border-slate-600 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white font-black text-2xl" data-alt="Logo nhà cung cấp phụ tùng 2">APW</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-lg">AutoParts World - Sỉ lẻ linh kiện</h4>
+<span class="px-2 py-0.5 bg-slate-500/10 text-slate-500 text-xs font-bold rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">stars</span> Nhà phân phối
+                                        </span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-1">Phân phối linh kiện ô tô Nhật/Hàn cho các dòng Toyota, Hyundai, Kia giá gốc.</p>
+<div class="flex items-center gap-4 mb-4 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> TP. Hồ Chí Minh</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">star</span> 4.7 (850 đánh giá)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_shipping</span> 48h</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white py-2 px-4 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors">Kết nối ngay</button>
+<button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 py-2 px-4 rounded-lg text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">Import sản phẩm</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 3 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:shadow-md transition-shadow">
+<div class="flex gap-5">
+<div class="w-24 h-24 rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0 flex items-center justify-center border border-slate-200 dark:border-slate-600 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-white font-black text-2xl" data-alt="Logo nhà cung cấp phụ tùng 3">EPH</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-lg">EcoPart Hub - Phụ tùng OEM</h4>
+<span class="px-2 py-0.5 bg-blue-500/10 text-blue-500 text-xs font-bold rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">eco</span> Thân thiện môi trường
+                                        </span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-1">Nguồn hàng linh kiện OEM chất lượng cao, giá thành tối ưu cho gara vừa và nhỏ.</p>
+<div class="flex items-center gap-4 mb-4 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Đà Nẵng, VN</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">star</span> 4.5 (340 đánh giá)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_shipping</span> 3-5 ngày</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white py-2 px-4 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors">Kết nối ngay</button>
+<button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 py-2 px-4 rounded-lg text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">Import sản phẩm</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Panel: Connected Warehouses -->
+<div class="flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+<div class="p-5 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<h3 class="font-bold">Kho hàng đã kết nối</h3>
+<span class="bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded text-xs font-bold">04</span>
+</div>
+<div class="p-2">
+<!-- Connected Item 1 -->
+<div class="p-3 flex items-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg cursor-pointer group transition-colors">
+<div class="h-10 w-10 bg-slate-100 dark:bg-slate-700 rounded flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Logistics Express Center</p>
+<p class="text-[11px] text-slate-500">Đang hoạt động • 12.4k SKU</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- Connected Item 2 -->
+<div class="p-3 flex items-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg cursor-pointer group transition-colors">
+<div class="h-10 w-10 bg-slate-100 dark:bg-slate-700 rounded flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">inventory</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Kho sỉ Tân Bình</p>
+<p class="text-[11px] text-slate-500">Bình thường • 3.2k SKU</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- Connected Item 3 -->
+<div class="p-3 flex items-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg cursor-pointer group transition-colors">
+<div class="h-10 w-10 bg-slate-100 dark:bg-slate-700 rounded flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">car_repair</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Phụ tùng EuroParts</p>
+<p class="text-[11px] text-slate-500">Đang hoạt động • 850 SKU</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-900/50 text-center">
+<button class="text-xs font-bold text-primary hover:underline">Quản lý tất cả kết nối</button>
+</div>
+</div>
+<!-- Statistics/Insights Widget -->
+<div class="bg-gradient-to-br from-primary to-blue-700 rounded-xl p-6 text-white shadow-xl shadow-primary/20">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined p-2 bg-white/20 rounded-lg">insights</span>
+<span class="text-xs font-medium bg-white/20 px-2 py-1 rounded">Tháng này</span>
+</div>
+<p class="text-sm opacity-80 mb-1">Tổng giá trị nhập hàng</p>
+<p class="text-3xl font-black mb-6">452.8M <span class="text-sm font-normal">VND</span></p>
+<div class="w-full bg-white/20 h-1.5 rounded-full mb-2">
+<div class="bg-white h-1.5 rounded-full" style="width: 65%;"></div>
+</div>
+<p class="text-[11px] opacity-80">Đã đạt 65% hạn mức tín dụng tháng.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

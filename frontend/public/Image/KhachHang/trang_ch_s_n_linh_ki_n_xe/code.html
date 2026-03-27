@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>XeParts - Sàn linh kiện ô tô chính hãng</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+<!-- Logo -->
+<div class="flex items-center gap-2 shrink-0">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">settings_input_component</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-primary">XeParts</h1>
+</div>
+<!-- Search Bar -->
+<div class="hidden md:flex flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Tìm kiếm tên phụ tùng, mã OEM hoặc đời xe..." type="text"/>
+</div>
+</div>
+<!-- Actions -->
+<nav class="flex items-center gap-2 sm:gap-4">
+<div class="hidden lg:flex items-center gap-6 mr-4 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Sản phẩm</a>
+<a class="hover:text-primary transition-colors" href="#">Tra mã VIN</a>
+<a class="hover:text-primary transition-colors" href="#">Khuyến mãi</a>
+</div>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-primary text-[10px] text-white flex items-center justify-center rounded-full font-bold">2</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<div class="hidden sm:block h-10 w-10 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700">
+<img class="w-full h-full object-cover" data-alt="User profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB421cu0nDq2hoaiGOz2sdSkPd8RB16zkkmgm9KhMxliKTMjTDfiplL_5QlYoZutdGqk_lrc0D1scypItlqNsmwArA3Q1uouFFJQ-Jv2cQj9XhlaBBdiCe4p8k8ZTO5DcsVnkfnPwYNFCs54KJ4KTEDxcXUI57axRAJdjv20M0okOQZIGTP3Df14PuYxo_HBPTpBxOUfGdsJ-KVX5Uj0WE44sHNhZvnX17Io8GDcDAxQNOleJHFxDoccWjMArwWb_vJAUZnvBMH4HY"/>
+</div>
+</nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-6 space-y-12">
+<!-- Hero Banner -->
+<section class="relative rounded-xl overflow-hidden group">
+<div class="aspect-[21/9] md:aspect-[25/9] relative">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/40 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Professional mechanic working on luxury car engine with spare parts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9tfedXt5Qw9OZUWb1MXXemwG6F6M91lBsvt6XKU_wzFYfYZppCrBjjSLuWcEeJBRhGYuYTaeSAv34hSrH8h2RT3HLydaywfcrvnatkNhA72XoQZ33WuGHGIM-P-t9um0v14jJXW_hncLkC-FPzul-fU6y3CWdjTbg1qrLGO-tI0Q6yClAr75NmAjNW7j0p1pfH7Ok6D1o_zGNLC6xHhOGCXWYbtitIAylHYkPWLQn3YiWCle3GdUMMYnlGy5jas7rKC9mgBcYNsI"/>
+<div class="relative z-20 h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl space-y-4">
+<span class="inline-block px-3 py-1 bg-primary text-xs font-bold text-white rounded-full w-fit">KHUYẾN MÃI THÁNG 10</span>
+<h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Phụ Tùng Chính Hãng <br/><span class="text-primary">Ưu Đãi Đến 30%</span></h2>
+<p class="text-slate-300 text-sm md:text-lg max-w-md">Bảo dưỡng định kỳ với linh kiện đạt chuẩn từ các hãng Toyota, Mercedes, BMW, Ford.</p>
+<div class="flex gap-4 pt-2">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-all">Mua Ngay</button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold py-3 px-8 rounded-lg border border-white/20">Tìm Dealer</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Filter -->
+<section class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+<h3 class="text-xl font-bold">Tìm kiếm nhanh theo dòng xe</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-500">Hãng xe</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg h-12">
+<option>Chọn hãng xe (VD: Toyota)</option>
+<option>Mercedes-Benz</option>
+<option>BMW</option>
+<option>Ford</option>
+<option>Hyundai</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-500">Model</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg h-12">
+<option>Chọn dòng xe</option>
+<option>Camry</option>
+<option>Vios</option>
+<option>Ranger</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-500">Năm sản xuất</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg h-12">
+<option>Tất cả năm</option>
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+</select>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold h-12 rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-xl">filter_list</span>
+                    Lọc phụ tùng
+                </button>
+</div>
+</section>
+<!-- Categories -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-2xl font-bold">Danh mục linh kiện</h3>
+<a class="text-primary font-medium text-sm flex items-center gap-1 hover:underline" href="#">
+                    Xem tất cả <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Category Card 1 -->
+<div class="group cursor-pointer bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-xl hover:border-primary transition-all text-center">
+<div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">earth_engine</span>
+</div>
+<h4 class="font-bold text-lg">Gầm &amp; Máy</h4>
+<p class="text-xs text-slate-500 mt-1">1,240 sản phẩm</p>
+</div>
+<!-- Category Card 2 -->
+<div class="group cursor-pointer bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-xl hover:border-primary transition-all text-center">
+<div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">bolt</span>
+</div>
+<h4 class="font-bold text-lg">Hệ thống Điện</h4>
+<p class="text-xs text-slate-500 mt-1">850 sản phẩm</p>
+</div>
+<!-- Category Card 3 -->
+<div class="group cursor-pointer bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-xl hover:border-primary transition-all text-center">
+<div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">car_repair</span>
+</div>
+<h4 class="font-bold text-lg">Thân vỏ &amp; Gương</h4>
+<p class="text-xs text-slate-500 mt-1">2,100 sản phẩm</p>
+</div>
+<!-- Category Card 4 -->
+<div class="group cursor-pointer bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-xl hover:border-primary transition-all text-center">
+<div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">airline_seat_recline_extra</span>
+</div>
+<h4 class="font-bold text-lg">Nội thất</h4>
+<p class="text-xs text-slate-500 mt-1">560 sản phẩm</p>
+</div>
+</div>
+</section>
+<!-- Recommended Products -->
+<section class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<h3 class="text-2xl font-bold">Gợi ý dành cho bạn</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="Brake discs and pads set for performance car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7jUd5uOcbOyWFINeOqcUppGDK51AI5wyG69_iLF0GEJ3ixSqsrrW_CF9Up0oJFi_SrrSJT_89nLp8PQfZbz7CMfciOqDrcqjLsFEds7YDpXjmF0gCpwlFTdHO88wxdu6MZPB2dlJt1GdzOmrP68ZJmmWrEvy1G7iv4GojZ3LLGjIw_S332i-Lifge693AkQnX_U3lKAQcSQvq8txXchyGfVVZQQmURyXtLeFYsLO_jZyBuq4POnrmT-VYkhn63vqdnI90bYVCNnE"/>
+<div class="absolute top-2 left-2 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">-15%</div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Hệ thống phanh</p>
+<h5 class="font-bold text-sm line-clamp-2 min-h-[40px]">Bộ đĩa phanh trước Brembo - Mercedes C-Class 2018+</h5>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold text-lg">2.450.000đ</span>
+<span class="text-slate-400 text-xs line-through">2.900.000đ</span>
+</div>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Thêm vào giỏ
+                        </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="High performance car engine oil bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSBqIW-hGy-wgQcENYhnesBWjWBgNlO_dHPEXNRTVcV0L2nirsWmQ6iNVm_FfPWtnap9mQiQPcSylBvftsHZl57CFPhWYzHmHJ335-CgB2Wn2qBwgVKBnGJPCW_CNUIpOphuo3LNzX9nyZqNlCPLLTFY6T1iZ8YB2If3L_LYpusYpam4BbZ5i7fClKEay7apGvDVtLNGjHifqcSa-iMMrjMiMALlDC6OP9Kkti01mzaMXOt2LfXMsGPrwldT4RkfwiyQoxCK9cHd4"/>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Dầu nhớt</p>
+<h5 class="font-bold text-sm line-clamp-2 min-h-[40px]">Dầu nhớt tổng hợp Mobil 1 5W-30 - Can 5 Lít</h5>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold text-lg">1.150.000đ</span>
+</div>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Thêm vào giỏ
+                        </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="Automotive air filter engine part" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCnmePpKtEZ4fZ_ubMWJiyNP2qGhD9pqV88VsVKBrVEDT1MX5GNTCM6qWYeLlC6r9lOzAzZrPcgjNGBQI52nMoqajJrC31mcCL3YgDg3R9eDCalhOjUQ3tmYHNmuKrMaiVJSPMJVP2z5d7keZnQ1aDuWgjoqoo5z8zcMli35Orj7YYJ6y08h02PPeL388qmoqM7lC2DazIseqIkAfNxFjBlPT-T5IT-dmfK61WqCqMbrlRALKYz9rdLBfvd5Y1bySAwHqpe43pbZo"/>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Lọc gió</p>
+<h5 class="font-bold text-sm line-clamp-2 min-h-[40px]">Lọc gió động cơ K&amp;N High-Flow - Toyota Fortuner/Hilux</h5>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold text-lg">1.850.000đ</span>
+</div>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Thêm vào giỏ
+                        </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="Modern led car headlight assembly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4SVlvlGYwLJuMEmuCbTvGD6o55e6yXvUXWf8NU1-P-dbuH7hvS5bIMTcf9vURTWwcAH43XCHEL36C6_2CTvb-cn8wcdPofnrekczlsYLB_aPfiWElL0r3ILC4J3Kwqe72Tw4fpPmKk1Qh3xRLr4wZU6Ngcvysm2qOQMRh8Av8ljg3mPqpbEdatPg0uUXDord87MxIzN3ycyE7GRoqsDRq22E7BQrX7AhcxjJjwrVGHTFpgMzflMI0GAm-WhhrK_2Oc3lQwK_TiH0"/>
+<div class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">HOT</div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Hệ thống chiếu sáng</p>
+<h5 class="font-bold text-sm line-clamp-2 min-h-[40px]">Đèn pha LED Full-Matrix - Phù hợp Ford Ranger Wildtrak</h5>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold text-lg">15.200.000đ</span>
+</div>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Thêm vào giỏ
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-20">
+<div class="max-w-7xl mx-auto px-4 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Company Info -->
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-xl">settings_input_component</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-primary">XeParts</h2>
+</div>
+<p class="text-sm text-slate-500 leading-relaxed">Chuyên cung cấp linh kiện ô tô chính hãng, giao hàng toàn quốc và hỗ trợ lắp đặt tại hệ thống gara liên kết.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">social_leaderboard</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">language</span>
+</a>
+</div>
+</div>
+<!-- Customer Support -->
+<div class="space-y-4">
+<h4 class="font-bold">Hỗ trợ khách hàng</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Hướng dẫn mua hàng</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo hành</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Quy định đổi trả</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Tra cứu đơn hàng</a></li>
+</ul>
+</div>
+<!-- Quick Links -->
+<div class="space-y-4">
+<h4 class="font-bold">Danh mục phổ biến</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Phụ tùng Toyota</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Phụ tùng Mercedes</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Dầu nhớt &amp; Phụ gia</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Đồ chơi xe hơi</a></li>
+</ul>
+</div>
+<!-- Contact & Newsletter -->
+<div class="space-y-4">
+<h4 class="font-bold">Liên hệ</h4>
+<div class="space-y-2 text-sm text-slate-500">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">call</span> 1900 6789</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> support@xeparts.vn</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">location_on</span> 123 Đường Láng, Đống Đa, Hà Nội</p>
+</div>
+<div class="pt-4">
+<p class="text-xs font-bold mb-2">Đăng ký nhận tin ưu đãi</p>
+<div class="flex">
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-l-lg text-xs py-2 px-3 focus:ring-primary" placeholder="Email của bạn" type="email"/>
+<button class="bg-primary text-white px-4 rounded-r-lg hover:bg-primary/90 transition-colors">Gửi</button>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+<p>© 2024 XeParts. All rights reserved. Phát triển bởi Design Team.</p>
+<div class="flex items-center gap-4">
+<img class="opacity-50 grayscale" data-alt="Visa payment logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr1Hf5ho4DyL-47NxLwhVplvDKbiYcWqDJWv5qeLYEJeOyvsmuhiHmZOFeGiLdsYjdnYD1grN44bCrsEZsSo0ruNSJteMSli_sLV3nZFscZcoPzkTQsXHrJpyUrXFCvuT0Q_J1AMUN7qcUTvrqnlAWVmtjHR8bU9kwJSQBU3ibuH9KO6THDYw0FFiVsUbcthXZ6kr9V4A15RWcs0OxUCq80oCqUOfX4u7Cavqi8_hYucsMbkCySS8R3t3kWj2m8I-NaGiuL8KrgnQ"/>
+<img class="opacity-50 grayscale" data-alt="Mastercard payment logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsS4M1rC3q7Z8sESOsSHqCn3la88xpIdJwT8B1TE_qfrbj2erNRzZrNQAOlUOw8czTCs5Km656sWB2FpNcWmD1sBwjNQun2CZ0ObDJKNSQHqX4lcu7Bv38Dcpni1IQ5MXeCtspTts_733Xh4jCwVAFqbzatohAWySj-ynQMew95TO8vVzJ8t6c_mmVo1nnK6q8TdQivDvHdX1NyLI4YFfcQQUKqaKrP9hKzWyDZSz0znL2-_1vB0AuinvvQpyJrhjgfZyecRiKy44"/>
+<img class="opacity-50 grayscale" data-alt="VNPAY payment logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPlHlmm_LTh8arkHmPquTzbc2sqWpAr1a7o4fbveKjOiarvwn1WKkObEA20KjoTND0F-jHrRlzhgehGmjyso5n0IAO-Mbgqxv7_8WjqVXnCkIJ6x0-lHFycKzfXiIwimuNYR1IdyBm8DVhuArzVZxsX8hU0J92r9A2V3SRDgMEYn1srkTHBO03qiJRLWIYTbAm_l-yXk7aGemFcXv9GVYpw80_Fg7x3ss2_UDcKEmVnhwkPMGeGlUnu1kMYFzvdHJ-uhkZkhKg54k"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
